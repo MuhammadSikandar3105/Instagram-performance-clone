@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* end */
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: #000000;
+    --border-color: #dbdbdb;
+    --modal-bg: rgb(255, 255, 255, 1);
+    --modal-shadow: rgb(0, 0, 0, 0.15);
+    --toggle-btn: #dbdfe4;
+    --btn-color: rgb(119, 119, 119, 1);
+    --bgborder-color: rgb(85, 85, 85, 0.3);
+    --hover-color: #dbdbdb57;
+    --links-color: #00376B;
+    --dark-color: rgb(40, 39, 39);
+    --visited-color: rgb(9, 9, 9);
+
+    /* gradient color */
+    --gradient-lavender: rgb(211, 0, 197);
+    --gradient-orange: rgb(255, 122, 0);
+    --gradient-pink: rgb(255, 1, 105);
+    --gradient-purple: rgb(118, 56, 250);
+    --gradient-red: rgb(255, 48, 64);
+    --gradient-yellow: rgb(255, 214, 0);
+    /* background: linear-gradient(circle, rgb(238 1 142), rgb(254 123 11), rgb(87 9 28)); */
+}
+
+.darkmode {
+    --primary-color: black;
+    --secondary-color: white;
+    --dark-color: gray;
+    --links-color: #E0f1ff;
+    --border-color: rgb(54 54 54);
+    --modal-bg: rgb(38, 38, 38, 1);
+    --modal-shadow: rgb(0, 0, 0, 0.15);
+    --toggle-btn: #dbdfe4;
+    --btn-color: rgb(115, 115, 115, 1);
+    --hover-color: rgba(54, 54, 54, 0.378);
+    --visited-color: rgb(224, 241, 255);
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+.dark {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.hover:hover {
+    background-color: var(--hover-color);
+}
+
+.bg-border {
+    background-color: var(--border-color);
+}
+
+.btn-color {
+    color: var(--btn-color);
+}
+
+.border {
+    border-color: var(--border-color);
+}
+
+.modalbg {
+    background-color: var(--modal-bg);
+}
+
+.modalshadow {
+    box-shadow: 0px 4px 12px var(--modal-shadow);
+}
+
+.modalhover:hover {
+    background-color: var(--border-color);
+}
+
+.toggleBg {
+    background-color: var(--toggle-btn);
+}
+
+.borderlight {
+    background-color: var(--border-color);
+}
+
+img,
+a:hover {
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
