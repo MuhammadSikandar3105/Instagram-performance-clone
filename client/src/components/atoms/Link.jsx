@@ -18,7 +18,7 @@ const Link = React.memo(
     spanname,
     ...props
   }) => {
-    const { islarg } = useSelector((state) => state.screen);
+    const { largescreen, laptop } = useSelector((state) => state.screen);
     return (
       <NavLink
         className={
@@ -49,7 +49,7 @@ const Link = React.memo(
         >
           {Icon}
         </div>
-        {islarg && listspan && (
+        {largescreen && !laptop && listspan && (
           <span
             id={listspan}
             className={`visited:font-extrabold visited:text-red-500`}

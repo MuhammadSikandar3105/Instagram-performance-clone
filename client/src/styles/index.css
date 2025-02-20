@@ -80,12 +80,20 @@
     border-color: var(--border-color);
 }
 
+.border-right {
+    border-right-color: var(--border-color);
+}
+
 .modalbg {
     background-color: var(--modal-bg);
 }
 
 .modalshadow {
     box-shadow: 0px 4px 12px var(--modal-shadow);
+}
+
+.searchmodalshadow {
+    box-shadow: 4px 0px 24px var(--modal-shadow);
 }
 
 .modalhover:hover {

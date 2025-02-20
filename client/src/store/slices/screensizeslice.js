@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    ismobile: false,
-    isipad: false,
-    istablet: false,
-    islaptop: false,
-    islarg: false
+    mobile: false,
+    ipad: false,
+    tablet: false,
+    laptop: false,
+    largescreen: false
 }
 
 const resetState = (state) => {
-    state.ismobile = false
-    state.isipad = false
-    state.istablet = false
-    state.islaptop = false
-    state.islarg = false
+    state.mobile = false
+    state.ipad = false
+    state.tablet = false
+    state.laptop = false
+    state.largescreen = false
 }
 
 const Slice = createSlice({
@@ -22,23 +22,23 @@ const Slice = createSlice({
     reducers: {
         ismobile(state) {
             resetState(state)
-            state.ismobile = true
+            state.mobile = true
         },
         isipad(state) {
             resetState(state)
-            state.isipad = true
+            state.ipad = true
         },
         istablet(state) {
             resetState(state)
-            state.istablet = true
+            state.tablet = true
         },
         islaptop(state) {
             resetState(state)
-            state.islaptop = true
+            state.laptop = true
         },
         islarg(state) {
             resetState(state)
-            state.islarg = true
+            state.largescreen = true
         },
     }
 })

@@ -1,23 +1,19 @@
 import React, { Suspense } from "react";
-import { MoreModalItem, TbFileReport } from "./index";
-
-const SeachModal = () => {
+import { Search, SearchPosition } from "./index";
+const SeachModal = ({ navbarWidth }) => {
   return (
-    <Suspense>
-      <div className="flex flex-col justify-between items-start">
-        <MoreModalItem
-          image={<TbFileReport size="16" className="text-secondary" />}
-          children="Report a Problem"
-        />
-        <div className="h-[6px] my-2 w-[calc(100%+16px)]  borderlight -mx-2"></div>
-        {/* switch acounts */}
-        <MoreModalItem children="Switch Acounts" />
-        <div className="h-[1px] my-2 w-[calc(100%+16px)]  borderlight -mx-2"></div>
-        <div className="cursor-pointer w-full modalhover rounded-[10px]">
-          <p className="p-4 text-[14px] ">Log out</p>
+    <SearchPosition navbarWidth={navbarWidth}>
+      <Suspense>
+        <div className="flex flex-col justify-between items-start">
+          <div className="searchTag pt-3 pb-9 my-2 pr-3 pl-6 mx-0">
+            <h2 className="font-bold">Search</h2>
+          </div>
+          <Search type="text" name="search" />
+          {/* horizantala line */}
+          <div className="h-[1px] my-2 w-[calc(100%)]  borderlight"></div>
         </div>
-      </div>
-    </Suspense>
+      </Suspense>
+    </SearchPosition>
   );
 };
 
