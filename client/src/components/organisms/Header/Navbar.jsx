@@ -13,36 +13,23 @@ import {
   MdHomeFilled,
   Search,
   SeachModal,
+  useWidth,
 } from "./index.js";
 import usemodal from "../../../lib/hooks/usemodal.js";
 
 const Navbar = () => {
   const { openmodal, goback } = usemodal();
-  const [navbarWidth, setNavbarWidth] = useState(0);
   const { activemodal } = useSelector((state) => state.modal);
   const navbarRef = useRef(null);
+  const { Width } = useWidth(navbarRef);
 
-  useEffect(() => {
-    const updateNavWidth = () => {
-      if (navbarRef.current) {
-        setNavbarWidth(navbarRef.current.offsetWidth);
-      }
-    };
-
-    const observer = new ResizeObserver(updateNavWidth);
-    if (navbarRef.current) {
-      observer.observe(navbarRef.current);
-    }
-    updateNavWidth();
-
-    return () => observer.disconnect();
-  }, []);
   return (
     <section className={`fixed ${flex} w-fit shrink-0 grow-0`}>
       <nav
         ref={navbarRef}
         id="navbar-sec"
-        className={`navbar-sec px-3 relative pb-5 pt-2 ${flex} h-[100vh] justify-between max-w-[284px] w-full border border-r-[1px]  navbar-expand bg-body-dark`}
+        className={`navbar-sec px-3 relative pb-5 pt-2 ${flex} h-[100vh] justify-between max-w-[284px] w-full border border-r-[1px]
+          navbar-expand bg-body-dark`}
         data-bs-theme="dark"
       >
         <ul className={`w-full ${flex} justify-center gap-1 content-start`}>
@@ -85,9 +72,7 @@ const Navbar = () => {
                 {activemodal === "appearence" && (
                   <ApearenceModal goback={goback} />
                 )}
-                {activemodal === "search" && (
-                  <SeachModal navbarWidth={navbarWidth} />
-                )}
+                {activemodal === "search" && <SeachModal navbarWidth={Width} />}
               </Modal>
             </Suspense>
           )}

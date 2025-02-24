@@ -16,10 +16,11 @@ const SearchPosition = ({ children, navbarWidth }) => {
 
   return (
     <div
-      className={`w-[397px] ${
+      className={`max-w-[397px] w-full h-full flex flex-col ${
         darkTheme && "darkmode"
-      } pt-2 h-[100vh] rounded-r-[16px] border-r-[1px] border-right rounded-br-[16px] searchmodalshadow bg-primary text-secondary absolute top-0`}
+      } h-[100vh] rounded-r-[16px] border-r-[1px] border-right rounded-br-[16px] searchmodalshadow bg-primary text-secondary absolute top-0`}
       style={{ left: navbarWidth }}
+      onClick={(e) => e.stopPropagation()}
     >
       {children}
     </div>

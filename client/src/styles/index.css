@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
 /* end */
 :root {
     --primary-color: rgb(255, 255, 255);
     --secondary-color: #000000;
     --border-color: #dbdbdb;
-    --modal-bg: rgb(255, 255, 255, 1);
+    --modal-bg: rgba(255, 255, 255, 0.895);
     --modal-shadow: rgb(0, 0, 0, 0.15);
     --toggle-btn: #dbdfe4;
+    --gray-color: rgb(37, 37, 37);
     --btn-color: rgb(119, 119, 119, 1);
     --bgborder-color: rgb(85, 85, 85, 0.3);
+    --light-gray: #737373;
     --hover-color: #dbdbdb57;
     --links-color: #00376B;
     --dark-color: rgb(40, 39, 39);
@@ -30,10 +38,12 @@
     --secondary-color: white;
     --dark-color: gray;
     --links-color: #E0f1ff;
-    --border-color: rgb(54 54 54);
+    --border-color: rgba(54, 54, 54, 0.796);
     --modal-bg: rgb(38, 38, 38, 1);
     --modal-shadow: rgb(0, 0, 0, 0.15);
     --toggle-btn: #dbdfe4;
+    --light-gray: #A8A8A8;
+    --gray-color: rgb(180, 180, 180);
     --btn-color: rgb(115, 115, 115, 1);
     --hover-color: rgba(54, 54, 54, 0.378);
     --visited-color: rgb(224, 241, 255);
@@ -76,12 +86,28 @@
     color: var(--btn-color);
 }
 
+.lightGray {
+    color: var(--light-gray);
+}
+
 .border {
+    border-color: var(--border-color);
+}
+
+.inputborder {
     border-color: var(--border-color);
 }
 
 .border-right {
     border-right-color: var(--border-color);
+}
+
+.crossbg {
+    background-color: var(--gray-color);
+}
+
+.borderColor {
+    color: var(--border-color);
 }
 
 .modalbg {

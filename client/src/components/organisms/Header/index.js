@@ -10,6 +10,8 @@ const ApearenceModal = React.lazy(() => import("./HeaderModal/MoreModal/Apearenc
 const SeachModal = React.lazy(() => import("./HeaderModal/SearchModal/SearchModal.jsx"))
 const Modal = React.lazy(() => import("../../../components/molecules/Modal/Modal.jsx"));
 
+// custom hooks
+import useWidth from "../../../lib/hooks/useWidth.js";
 // constants
 import { flex } from '../../../lib/constants/constant.js'
 
@@ -30,5 +32,5 @@ import { TbAt } from "react-icons/tb";
 import { CiSearch } from "react-icons/ci";
 
 // all exports
-export { Link, List, Logo, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, Navbaritems, darktheme2, FaInstagram, FaCamera, FaRegUser, FaRegBell, TbAt, HiOutlineMenu, FiPlusSquare, IoPaperPlaneOutline, IoCameraReverseOutline, CiSearch, MdOutlineExplore, MdHomeFilled };
+export { Link, List, Logo, useWidth, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, Navbaritems, darktheme2, FaInstagram, FaCamera, FaRegUser, FaRegBell, TbAt, HiOutlineMenu, FiPlusSquare, IoPaperPlaneOutline, IoCameraReverseOutline, CiSearch, MdOutlineExplore, MdHomeFilled };
 

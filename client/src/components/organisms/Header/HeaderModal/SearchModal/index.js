@@ -1,6 +1,6 @@
-import Search from "../../../../molecules/SearchInput";
+import SearchInput from "../../../../molecules/SearchInput";
 import SearchPosition from "./SearchPosition";
 import { islaptop, islarg } from "../../../../../store/slices/screensizeslice";
 
 
-export { Search, SearchPosition, islaptop, islarg }
+export { SearchInput, SearchPosition, islaptop, islarg }

@@ -1,9 +1,14 @@
 import React from "react";
 
-const Input = ({ type, name }) => {
+const Input = ({ type, name, classes }) => {
   return (
     <>
-      <input type={type} name={name} />
+      <input
+        type={type}
+        name={name}
+        className={`${classes} placeholder:font-extralight`}
+        placeholder="Search"
+      />
     </>
   );
 };
