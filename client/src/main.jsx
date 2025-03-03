@@ -15,7 +15,47 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/home",
+        path: "/",
+        element: (
+          <Suspense>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/explore",
+        element: (
+          <Suspense>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/reels",
+        element: (
+          <Suspense>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/message",
+        element: (
+          <Suspense>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <Suspense>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/threads",
         element: (
           <Suspense>
             <Home />

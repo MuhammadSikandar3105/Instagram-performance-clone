@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, RxCross1 } from "./index";
+import { Cross, Input } from "./index";
 
 const SearchInput = () => {
   return (
@@ -12,10 +12,7 @@ const SearchInput = () => {
         />
         <div className="cross absolute top-1/2 right-7 transform -translate-y-1/2 ">
           <div className="cancel-svg relative w-4 h-4 rounded-full crossbg">
-            <RxCross1
-              size={9}
-              className="absolute borderColor top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            />
+            <Cross className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
           </div>
         </div>
       </div>

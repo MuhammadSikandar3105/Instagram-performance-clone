@@ -1,13 +1,5 @@
 import React, { Suspense } from "react";
-import {
-  FiSettings,
-  FiMoon,
-  FiActivity,
-  FiSave,
-  MoreModalItem,
-  TbFileReport,
-  FiSun,
-} from "./index";
+import { MoreModalItem, MoreModalIcons } from "./index";
 import { useSelector } from "react-redux";
 const MoreItems = ({ openmodal }) => {
   const darktheme = useSelector((state) => state.theme.darktheme);
@@ -17,26 +9,26 @@ const MoreItems = ({ openmodal }) => {
       <div className="flex flex-col justify-between items-start">
         {/* settings */}
         <MoreModalItem
-          image={<FiSettings size="16" className="text-secondary" />}
+          image={<MoreModalIcons name="Setting" />}
           children="Settings"
         />
         {/* your activity */}
         <MoreModalItem
-          image={<FiActivity size="16" className="text-secondary" />}
+          image={<MoreModalIcons name="Activity" />}
           children="Your Activity"
         />
         {/* saved */}
         <MoreModalItem
-          image={<FiSave size="16" className="text-secondary" />}
+          image={<MoreModalIcons name="Save" />}
           children="Saved"
         />
         {/* switch appearence */}
         <MoreModalItem
           image={
             darktheme ? (
-              <FiMoon size="16" color="white" />
+              <MoreModalIcons name="Moon" />
             ) : (
-              <FiSun size="16" color="black" />
+              <MoreModalIcons name="sun" />
             )
           }
           children="Switch Appearence"
@@ -44,7 +36,7 @@ const MoreItems = ({ openmodal }) => {
           handleOpenmodal={openmodal}
         />
         <MoreModalItem
-          image={<TbFileReport size="16" className="text-secondary" />}
+          image={<MoreModalIcons name="Report" />}
           children="Report a Problem"
         />
         <div className="h-[6px] my-2 w-[calc(100%+16px)]  borderlight -mx-2"></div>

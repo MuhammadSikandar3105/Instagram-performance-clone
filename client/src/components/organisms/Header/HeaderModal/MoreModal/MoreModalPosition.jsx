@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const MoreModalPosition = ({ children }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
-  const { islarg } = useSelector((state) => state.screen);
+  const screensize = useSelector((state) => state.screen);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const modalref = useRef(null);
   const buttonref = useSelector((state) => state.modal.buttonRef);
@@ -13,7 +13,7 @@ const MoreModalPosition = ({ children }) => {
       let newtop = buttonref.top - modalref?.current?.offsetHeight;
       let newleft = buttonref.left;
       // if screen is less than 1280
-      if (!islarg) {
+      if (!screensize.largescreen) {
         newtop += buttonref.height;
         newleft += buttonref.width;
       }
@@ -25,7 +25,7 @@ const MoreModalPosition = ({ children }) => {
         return prev;
       });
     }
-  }, [buttonref, islarg]);
+  }, [buttonref, screensize, modalref]);
 
   useLayoutEffect(() => {
     const observer = new ResizeObserver(updatePosition);

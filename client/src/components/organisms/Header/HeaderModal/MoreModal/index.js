@@ -4,8 +4,6 @@ import MoreItems from "./MoreItems";
 import MoreModal from "./MoreModal";
 const MoreModalItem = React.lazy(() => import("../../../../atoms/MoreModalItem"));
 const MoreModalPosition = React.lazy(() => import("./MoreModalPosition"));
-import { FiSettings, FiChevronLeft, FiActivity, FiSun, FiSave, FiMoon } from "react-icons/fi";
-import { TbFileReport } from "react-icons/tb";
-// import { FiChevronLeft  } from "react-icons/fa";
+import MoreModalIcons, { Back } from "../../../../../assets/svg/NavbarIcons/MoreModalIcons";
 
-export { MoreModalItem, darktheme2, MoreModalPosition, MoreModal, MoreItems, FiSun, FiChevronLeft, FiSettings, FiActivity, FiSave, FiMoon, TbFileReport }
+export { MoreModalItem, Back, MoreModalIcons, darktheme2, MoreModalPosition, MoreModal, MoreItems }

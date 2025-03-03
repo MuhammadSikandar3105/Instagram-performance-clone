@@ -1,10 +1,12 @@
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal, goPrevious, isModalOpen } from "../../store/slices/modalslice";
+import { activeRoute } from "../../components/molecules";
 
 
 const usemodal = () => {
     const { activemodal } = useSelector(state => state.modal)
+    const { prevActive } = useSelector(state => state.active)
     const dispatch = useDispatch()
 
     const openmodal = useCallback(
@@ -32,6 +34,7 @@ const usemodal = () => {
     const closemodal = useCallback(() => {
         if (activemodal !== null) {
             dispatch(closeModal())
+            dispatch(activeRoute(prevActive))
         }
     }, [dispatch, activemodal])
 

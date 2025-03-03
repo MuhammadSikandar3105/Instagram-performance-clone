@@ -3,6 +3,7 @@ import postReducer from './slices/postslice'
 import themeReducer from './slices/themeslice'
 import sreenReducer from './slices/screensizeslice'
 import modalReducer from './slices/modalslice'
+import activeReduceer from './slices/activerouteslice'
 import { authentictionMiddleware } from './middleware/auth'
 
 export const store = configureStore({
@@ -10,7 +11,8 @@ export const store = configureStore({
         post: postReducer,
         theme: themeReducer,
         screen: sreenReducer,
-        modal: modalReducer
+        modal: modalReducer,
+        active: activeReduceer
 
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(authentictionMiddleware)

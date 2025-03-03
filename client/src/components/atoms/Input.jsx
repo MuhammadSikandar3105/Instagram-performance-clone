@@ -6,6 +6,7 @@ const Input = ({ type, name, classes }) => {
       <input
         type={type}
         name={name}
+        autoFocus
         className={`${classes} placeholder:font-extralight`}
         placeholder="Search"
       />

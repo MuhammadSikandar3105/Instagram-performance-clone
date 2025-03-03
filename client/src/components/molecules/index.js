@@ -1,4 +1,4 @@
 import Input from "../atoms/Input";
-import { RxCross1 } from "react-icons/rx";
-
-export { RxCross1, Input }
+import { Cross } from "../../assets/svg/NavbarIcons/MoreModalIcons";
+import { activeRoute, prevActiveRoute } from "../../store/slices/activerouteslice";
+export { Cross, Input, activeRoute, prevActiveRoute }
