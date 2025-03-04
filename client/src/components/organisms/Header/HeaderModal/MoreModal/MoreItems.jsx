@@ -7,6 +7,7 @@ const MoreItems = ({ openmodal }) => {
   return (
     <Suspense>
       <div className="flex flex-col justify-between items-start">
+        {/* MoreModalItem for all li element of more modal */}
         {/* settings */}
         <MoreModalItem
           image={<MoreModalIcons name="Setting" />}
@@ -32,7 +33,7 @@ const MoreItems = ({ openmodal }) => {
             )
           }
           children="Switch Appearence"
-          modalname="appearence"
+          modalname="Appearence"
           handleOpenmodal={openmodal}
         />
         <MoreModalItem

@@ -24,11 +24,11 @@ import {
 import usemodal from "../../../lib/hooks/usemodal.js";
 
 const Navbar = () => {
-  const { openmodal, goback } = usemodal();
+  const { openmodal, goback } = usemodal(); // custom hook to update modalSlice
   const { activemodal } = useSelector((state) => state.modal);
   const { largescreen } = useSelector((state) => state.screen);
   const navbarRef = useRef(null);
-  const { Width } = useWidth(navbarRef);
+  const { Width } = useWidth(navbarRef); // custom hook to check ele width
 
   return (
     <section
@@ -60,15 +60,15 @@ const Navbar = () => {
           {activemodal && (
             <Suspense>
               <Modal>
-                {activemodal === "more" && <MoreModal openmodal={openmodal} />}
-                {activemodal === "appearence" && (
+                {activemodal === "More" && <MoreModal openmodal={openmodal} />}
+                {activemodal === "Appearence" && (
                   <ApearenceModal goback={goback} />
                 )}
-                {activemodal === "search" && <SeachModal navbarWidth={Width} />}
-                {activemodal === "notifications" && (
+                {activemodal === "Search" && <SeachModal navbarWidth={Width} />}
+                {activemodal === "Notifications" && (
                   <NotifiModal navbarWidth={Width} />
                 )}
-                {activemodal === "create" && <CreateModal />}
+                {activemodal === "Create" && <CreateModal />}
               </Modal>
             </Suspense>
           )}

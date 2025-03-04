@@ -5,8 +5,8 @@ const MoreModalPosition = ({ children }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
   const screensize = useSelector((state) => state.screen);
   const [position, setPosition] = useState({ top: 0, left: 0 });
-  const modalref = useRef(null);
-  const buttonref = useSelector((state) => state.modal.buttonRef);
+  const modalref = useRef(null); // to get modal height for possition
+  const buttonref = useSelector((state) => state.modal.buttonRef); // left, top values
   const updatePosition = useCallback(() => {
     if (buttonref) {
       // if screen is greater than 1280
@@ -25,15 +25,17 @@ const MoreModalPosition = ({ children }) => {
         return prev;
       });
     }
-  }, [buttonref, screensize, modalref]);
+  }, [buttonref, screensize, modalref]); //update when screensize, modalref, buttonref chacnges
 
+  // use uselayouteffect beacause i want make changes before painting on ui
   useLayoutEffect(() => {
     const observer = new ResizeObserver(updatePosition);
     if (modalref.current) observer.observe(modalref.current);
 
-    return () => observer.disconnect();
-  }, [updatePosition]);
+    return () => observer.disconnect(); // for disconnect on unmounting
+  }, [updatePosition]); // whenever update position change it's run and paint the screen
 
+  // uselayouteffect for before painting the ui
   useLayoutEffect(() => {
     updatePosition();
     window.addEventListener("resize", updatePosition);

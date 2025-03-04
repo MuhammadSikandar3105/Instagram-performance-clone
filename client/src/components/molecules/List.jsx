@@ -1,25 +1,31 @@
-import React, { useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import { activeRoute, prevActiveRoute } from "./index";
+import { NavLink, useLocation } from "react-router-dom";
+import { activeRoute } from "./index";
 
-const List = React.memo(({ to, spanid, Icon, spanname, handleModal }) => {
+const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   const buttonRef = useRef(null);
   const { largescreen, laptop } = useSelector((state) => state.screen);
   const { active } = useSelector((state) => state.active);
   const dispatch = useDispatch();
+  const { pathname } = useLocation();
 
-  const handleClick = () => {
-    if (active !== spanname) {
-      dispatch(prevActiveRoute(active));
+  const handleClick = (e) => {
+    // if modal user want to open modal then not change route
+    if (handleModal) {
+      e.preventDefault();
+      dispatch(activeRoute(spanname));
     }
-    dispatch(activeRoute(spanname));
-    handleModal && handleModal(spanid, buttonRef);
+    handleModal && handleModal(spanname, buttonRef);
   };
+  // when pathname change then update acitveroute
+  useEffect(() => {
+    dispatch(activeRoute(pathname.split("/")[1] || "/")); //add '/' for home route
+  }, [pathname]);
 
   return (
     <NavLink
-      className={` p-3 w-full my-[2px] rounded-lg cursor-pointer hover ${
+      className={`p-3 w-full my-[2px] rounded-lg cursor-pointer hover ${
         active === spanname && handleModal && "border"
       }`}
       {...(to && to.trim() !== "" ? { to } : {})}
@@ -33,7 +39,7 @@ const List = React.memo(({ to, spanid, Icon, spanname, handleModal }) => {
         {largescreen && !laptop && spanname && (
           <span
             className={`${
-              active === spanname && "font-bold"
+              ("/" + active === to || active === spanname) && "font-bold"
             } visited:font-extrabold visited:text-red-500`}
           >
             {spanname}

@@ -1,14 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// which route is active for update in icons and List compo
 const slice = createSlice({
     name: 'active',
-    initialState: { active: 'Home', prevActive: '' },
+    initialState: { active: '/' },
     reducers: {
         activeRoute(state, action) {
             state.active = action.payload
-        },
-        prevActiveRoute(state, action) {
-            state.prevActive = action.payload
         }
     }
 })

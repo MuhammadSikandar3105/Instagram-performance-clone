@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// which modal is open 
 const modalslice = createSlice({
     name: 'modal',
     initialState: {
-        activemodal: null,
-        buttonRef: null,
-        modalhistory: []
+        activemodal: null, //now active
+        buttonRef: null, // left, right, bottom values for position compo
+        modalhistory: [] // save history for back to previous modal
 
     },
     reducers: {

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// initial state for slice
 const initialState = {
     mobile: false,
     ipad: false,
@@ -8,6 +9,8 @@ const initialState = {
     largescreen: false
 }
 
+// reset function who call one every call to reducer for 
+// updated value of screen and update specific istead of updating all
 const resetState = (state) => {
     state.mobile = false
     state.ipad = false

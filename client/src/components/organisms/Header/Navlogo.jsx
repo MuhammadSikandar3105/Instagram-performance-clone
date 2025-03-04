@@ -7,11 +7,7 @@ const Navlogo = () => {
   const { largescreen, laptop } = useSelector((state) => state.screen);
   return (
     <NavLink
-      className={({ isActive }) =>
-        `${
-          isActive ? "Active-link" : "non-active"
-        } navbar-brand w-full ms-0 pt-[32px] pb-4 px-3 mb-[12px]`
-      }
+      className={` navbar-brand w-full ms-0 pt-[32px] pb-4 px-3 mb-[12px]`}
       to="/"
     >
       {largescreen && !laptop ? <Logo /> : <RoutesIcons name="Logo" />}

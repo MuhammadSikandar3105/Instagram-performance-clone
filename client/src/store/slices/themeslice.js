@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// theme slice for update theme dark/light
 const slice = createSlice({
     name: 'theme',
     initialState: { darktheme: false },
