@@ -1,7 +1,12 @@
 import React from "react";
+import { MainContent } from "./index";
 
 const Profile = () => {
-  return <div className="text-center">Profile</div>;
+  return (
+    <MainContent>
+      <div className="text-center">Prfile</div>
+    </MainContent>
+  );
 };
 
 export default Profile;

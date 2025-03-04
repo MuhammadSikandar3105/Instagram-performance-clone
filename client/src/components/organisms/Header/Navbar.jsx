@@ -28,7 +28,7 @@ const Navbar = () => {
   const { activemodal } = useSelector((state) => state.modal);
   const { largescreen } = useSelector((state) => state.screen);
   const navbarRef = useRef(null);
-  const { Width } = useWidth(navbarRef); // custom hook to check ele width
+  const { width } = useWidth(navbarRef); // custom hook to check ele width
 
   return (
     <section
@@ -64,9 +64,9 @@ const Navbar = () => {
                 {activemodal === "Appearence" && (
                   <ApearenceModal goback={goback} />
                 )}
-                {activemodal === "Search" && <SeachModal navbarWidth={Width} />}
+                {activemodal === "Search" && <SeachModal navbarWidth={width} />}
                 {activemodal === "Notifications" && (
-                  <NotifiModal navbarWidth={Width} />
+                  <NotifiModal navbarWidth={width} />
                 )}
                 {activemodal === "Create" && <CreateModal />}
               </Modal>

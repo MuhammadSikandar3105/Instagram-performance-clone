@@ -4,6 +4,7 @@ import themeReducer from './slices/themeslice'
 import sreenReducer from './slices/screensizeslice'
 import modalReducer from './slices/modalslice'
 import activeReduceer from './slices/activerouteslice'
+import navbarReducer from './slices/navbarwidthslice'
 import { authentictionMiddleware } from './middleware/auth'
 
 export const store = configureStore({
@@ -12,7 +13,8 @@ export const store = configureStore({
         theme: themeReducer,
         screen: sreenReducer,
         modal: modalReducer,
-        active: activeReduceer
+        active: activeReduceer,
+        navWidth: navbarReducer
 
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(authentictionMiddleware)

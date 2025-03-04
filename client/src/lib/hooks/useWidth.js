@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { navbarwidth } from "../../store/slices/navbarwidthslice";
 
 // for check the navbar width to adjust the modal left margin
 const useWidth = (navbarRef) => {
-    const [Width, setWidth] = useState(0)
+    const { width } = useSelector(state => state.navWidth)
+    const dispatch = useDispatch()
     useEffect(() => {
         const updateNavWidth = () => {
             if (navbarRef?.current) {
-                setWidth(navbarRef.current.offsetWidth); // set the full width of passing element
+                dispatch(navbarwidth(navbarRef.current.offsetWidth))
             }
         };
 
@@ -19,7 +22,7 @@ const useWidth = (navbarRef) => {
         return () => observer.disconnect();
     }, [navbarRef]);
 
-    return { Width }
+    return { width }
 }
 
 export default useWidth
