@@ -11,14 +11,18 @@ const CreateModal = React.lazy(() => import("./HeaderModal/CreateModal/CreateMod
 const Modal = React.lazy(() => import("../../../components/molecules/Modal/Modal.jsx"));
 // custom hooks
 import useWidth from "../../../lib/hooks/useWidth.js";
+import usemodal from "../../../lib/hooks/usemodal";
 // constants
 import { flex } from '../../../lib/constants/constant.js'
 import List from "../../molecules/List";
 import Navlogo from "./Navlogo.jsx";
+import MobileNav from "./MobileNav.jsx";
+import { SearchInput } from "./HeaderModal/SearchModal";
+import Input from "../../atoms/Input.jsx";
 import { Home, Search, Explore, Reels, Message, Notification, Create, Profile, Threads, Hamberger } from './NavbarItems.jsx'
 // Icons components
 import Logo from "../../../assets/svg/NavbarIcons/Logo.jsx";
 import RoutesIcons, { ThreadsIcon } from "../../../assets/svg/NavbarIcons/RoutesIcons.jsx";
 // all exports
-export { Notification, ThreadsIcon, NotifiModal, CreateModal, Home, Explore, Reels, Message, Create, Profile, Threads, List, Logo, useWidth, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, darktheme2, RoutesIcons };
+export { Notification, Input, SearchInput, MobileNav, ThreadsIcon, NotifiModal, CreateModal, Home, Explore, Reels, Message, Create, Profile, Threads, List, Logo, useWidth, usemodal, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, darktheme2, RoutesIcons };
 

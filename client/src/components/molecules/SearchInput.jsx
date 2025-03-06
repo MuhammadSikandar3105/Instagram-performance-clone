@@ -1,10 +1,14 @@
 import React from "react";
 import { Cross, Input } from "./index";
 
-const SearchInput = () => {
+const SearchInput = ({ classes }) => {
   return (
     <>
-      <div className="input w-full px-4 flex relative mb-4">
+      <div
+        className={`input w-full px-4 flex relative ${
+          classes ? classes : "mb-4"
+        }`}
+      >
         <Input
           type="text"
           name="name"

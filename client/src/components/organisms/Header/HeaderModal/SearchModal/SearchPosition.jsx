@@ -7,7 +7,7 @@ const SearchPosition = ({ children, navbarWidth }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
   const largescreen = useSelector((state) => state.screen.largescreen);
   const dispatch = useDispatch();
-
+  console.log(navbarWidth);
   // dispatch only when screensize is greater than 1280px
   useEffect(() => {
     if (largescreen) {

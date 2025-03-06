@@ -8,7 +8,7 @@ const NotifiModal = ({ navbarWidth }) => {
           <div className="searchTag pt-3 pb-9 mt-2 pr-[14px] pl-6 mx-0">
             <h2 className="font-[600] text-2xl block w-full">Notifications</h2>
           </div>
-          <SearchInput />
+          <SearchInput autoFocus={true} />
           {/* horizantala line */}
         </div>
         <div className="h-[1px] my-2 w-[calc(100%)] borderlight"></div>

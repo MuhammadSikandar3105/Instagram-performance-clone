@@ -7,6 +7,7 @@ const NotifiPosition = ({ children, navbarWidth }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
   const largescreen = useSelector((state) => state.screen.largescreen);
   const dispatch = useDispatch();
+  console.log(navbarWidth);
   useEffect(() => {
     if (largescreen) {
       dispatch(islaptop());

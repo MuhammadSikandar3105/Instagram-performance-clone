@@ -4,7 +4,7 @@ import { MainContent } from "./index";
 const Profile = () => {
   return (
     <MainContent>
-      <div className="text-center">Prfile</div>
+      <div className="text-center">Profile</div>
     </MainContent>
   );
 };

@@ -5,7 +5,9 @@ import { activeRoute } from "./index";
 
 const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   const buttonRef = useRef(null);
-  const { largescreen, laptop } = useSelector((state) => state.screen);
+  const { largescreen, laptop, ipad, mobile } = useSelector(
+    (state) => state.screen
+  );
   const { active } = useSelector((state) => state.active);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -33,7 +35,9 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
       ref={buttonRef}
     >
       <div
-        className={`nav-link navbar-item flex flex-row items-center gap-4 justify-start max-w-[100%] focus:outline-none focus:bg-transparent active`}
+        className={`nav-link navbar-item flex flex-row items-center gap-4 ${
+          ipad || mobile ? "justify-center" : "justify-start"
+        } max-w-[100%] focus:outline-none focus:bg-transparent active`}
       >
         <div>{Icon}</div>
         {largescreen && !laptop && spanname && (

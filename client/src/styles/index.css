@@ -94,6 +94,10 @@
     border-color: var(--border-color);
 }
 
+.bordertopnav {
+    border-color: var(--border-color);
+}
+
 .inputborder {
     border-color: var(--border-color);
 }

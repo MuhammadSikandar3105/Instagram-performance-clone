@@ -14,13 +14,14 @@ const useWidth = (navbarRef) => {
         };
 
         const observer = new ResizeObserver(updateNavWidth);
+
         if (navbarRef?.current) {
             observer.observe(navbarRef.current);
+            updateNavWidth();
         }
-        updateNavWidth();
 
         return () => observer.disconnect();
-    }, [navbarRef]);
+    }, []);
 
     return { width }
 }
