@@ -1,5 +1,5 @@
 import React from "react";
-import { List, RoutesIcons, ThreadsIcon } from "./index";
+import { List, ProfileIcon, RoutesIcons, ThreadsIcon } from "./index";
 
 const Home = () => {
   return <List Icon={<RoutesIcons name="/" />} to="/" spanname="Home" />;
@@ -65,7 +65,7 @@ const Create = ({ openmodal }) => {
 const Profile = () => {
   return (
     <List
-      Icon={<RoutesIcons name="profile" />}
+      Icon={<ProfileIcon name="profile" />}
       spanname="Profile"
       to="/profile"
     />

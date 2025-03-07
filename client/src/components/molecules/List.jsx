@@ -40,15 +40,7 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
         } max-w-[100%] focus:outline-none focus:bg-transparent active`}
       >
         <div>{Icon}</div>
-        {largescreen && !laptop && spanname && (
-          <span
-            className={`${
-              ("/" + active === to || active === spanname) && "font-bold"
-            } visited:font-extrabold visited:text-red-500`}
-          >
-            {spanname}
-          </span>
-        )}
+        {largescreen && !laptop && spanname && <span>{spanname}</span>}
       </div>
     </NavLink>
   );
