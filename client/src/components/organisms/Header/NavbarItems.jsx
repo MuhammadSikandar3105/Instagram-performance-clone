@@ -35,9 +35,9 @@ const Reels = () => {
 const Message = () => {
   return (
     <List
-      Icon={<RoutesIcons name="message" />}
+      Icon={<RoutesIcons name="messages" />}
       spanname="Messages"
-      to="/message"
+      to="/messages"
     />
   );
 };

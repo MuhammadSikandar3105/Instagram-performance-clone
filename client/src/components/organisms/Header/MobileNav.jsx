@@ -46,7 +46,7 @@ const MobileNav = () => {
         <Home />
         <Explore />
         <Reels />
-        <Create />
+        <Create openmodal={openmodal} />
         <Message />
         <Profile />
         {activemodal && (

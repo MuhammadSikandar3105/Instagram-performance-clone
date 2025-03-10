@@ -40,7 +40,17 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
         } max-w-[100%] focus:outline-none focus:bg-transparent active`}
       >
         <div>{Icon}</div>
-        {largescreen && !laptop && spanname && <span>{spanname}</span>}
+        {largescreen && !laptop && spanname && (
+          <span
+            className={`${
+              (active.toLowerCase() === spanname.toLowerCase() &&
+                "font-bold") ||
+              (active === to && "font-bold")
+            }`}
+          >
+            {spanname}
+          </span>
+        )}
       </div>
     </NavLink>
   );
