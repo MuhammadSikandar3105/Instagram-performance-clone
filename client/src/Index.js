@@ -1,9 +1,9 @@
 import React from "react";
 
-const Home = React.lazy(() => import("./components/organisms/Main/Home"));
-const About = React.lazy(() => import("./components/pages/About"));
-const Contact = React.lazy(() => import("./components/pages/Contact"));
-const Login = React.lazy(() => import("./components/pages/Login"));
-const Signup = React.lazy(() => import("./components/pages/Signup"));
+const Home = React.lazy(() => import("./components/pages/Home.jsx"));
+const Explore = React.lazy(() => import("./components/pages/Explore.jsx"));
+const Reels = React.lazy(() => import("./components/pages/Reels.jsx"));
+const Message = React.lazy(() => import("./components/pages/Message.jsx"));
+const Profile = React.lazy(() => import("./components/pages/Profile.jsx"));
 
-export { Home, About, Contact, Login, Signup };
+export { Home, Explore, Reels, Message, Profile };
