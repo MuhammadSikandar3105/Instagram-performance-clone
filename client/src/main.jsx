@@ -4,8 +4,8 @@ import "./styles/index.css";
 import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Explore, Home, Message, Profile, Reels } from "./Index.js";
 import { store } from "../src/store/index.js";
+import { About, Contact, Home, Login, Signup } from "./Index.js";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -23,42 +23,34 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/explore",
+        path: "/about",
         element: (
           <Suspense>
-            <Explore />
+            <About />
           </Suspense>
         ),
       },
       {
-        path: "/reels",
+        path: "/contact",
         element: (
           <Suspense>
-            <Reels />
+            <Contact />
           </Suspense>
         ),
       },
       {
-        path: "/messages",
+        path: "/login",
         element: (
           <Suspense>
-            <Message />
+            <Login />
           </Suspense>
         ),
       },
       {
-        path: "/profile",
+        path: "/signup",
         element: (
           <Suspense>
-            <Profile />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/threads",
-        element: (
-          <Suspense>
-            <Home />
+            <Signup />
           </Suspense>
         ),
       },

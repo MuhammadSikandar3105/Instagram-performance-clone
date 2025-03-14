@@ -1,69 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import "tailwindcss";
 
-* {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-}
 
 /* end */
 :root {
-    --primary-color: rgb(255, 255, 255);
+    --primary-color: #F3F9FA;
     --secondary-color: #000000;
-    --border-color: #dbdbdb;
-    --modal-bg: rgba(255, 255, 255, 0.895);
-    --modal-shadow: rgb(0, 0, 0, 0.15);
-    --toggle-btn: #dbdfe4;
-    --gray-color: rgb(37, 37, 37);
-    --btn-color: rgb(119, 119, 119, 1);
-    --bgborder-color: rgb(85, 85, 85, 0.3);
-    --light-gray: #737373;
-    --hover-color: #dbdbdb57;
-    --links-color: #00376B;
-    --dark-color: rgb(40, 39, 39);
-    --visited-color: rgb(9, 9, 9);
-
-    /* gradient color */
-    --gradient-lavender: rgb(211, 0, 197);
-    --gradient-orange: rgb(255, 122, 0);
-    --gradient-pink: rgb(255, 1, 105);
-    --gradient-purple: rgb(118, 56, 250);
-    --gradient-red: rgb(255, 48, 64);
-    --gradient-yellow: rgb(255, 214, 0);
-    /* background: linear-gradient(circle, rgb(238 1 142), rgb(254 123 11), rgb(87 9 28)); */
-}
-
-.darkmode {
-    --primary-color: black;
-    --secondary-color: white;
-    --dark-color: gray;
-    --links-color: #E0f1ff;
-    --border-color: rgba(54, 54, 54, 0.796);
-    --modal-bg: rgb(38, 38, 38, 1);
-    --modal-shadow: rgb(0, 0, 0, 0.15);
-    --toggle-btn: #dbdfe4;
-    --light-gray: #A8A8A8;
-    --gray-color: rgb(180, 180, 180);
-    --btn-color: rgb(115, 115, 115, 1);
-    --hover-color: rgba(54, 54, 54, 0.378);
-    --visited-color: rgb(224, 241, 255);
-}
-
-::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-    background-color: gray;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
-}
-
-.dark {
-    background-color: var(--primary-color);
-    color: var(--secondary-color)
+    --primary2-color: #6366F1;
+    --secondary2-color: #050620;
+    --light-color: white;
 }
 
 .bg-primary {
@@ -74,75 +19,18 @@
     color: var(--secondary-color);
 }
 
+.text-primary {
+    color: var(--light-color);
+}
+
 .hover:hover {
     background-color: var(--hover-color);
 }
 
-.bg-border {
-    background-color: var(--border-color);
+.bg-btn {
+    background-color: var(--primary2-color);
 }
 
-.btn-color {
-    color: var(--btn-color);
-}
-
-.lightGray {
-    color: var(--light-gray);
-}
-
-.border {
-    border-color: var(--border-color);
-}
-
-.bordertopnav {
-    border-color: var(--border-color);
-}
-
-.inputborder {
-    border-color: var(--border-color);
-}
-
-.border-right {
-    border-right-color: var(--border-color);
-}
-
-.crossbg {
-    background-color: var(--gray-color);
-}
-
-.borderColor {
-    color: var(--border-color);
-}
-
-.modalbg {
-    background-color: var(--modal-bg);
-}
-
-.modalshadow {
-    box-shadow: 0px 4px 12px var(--modal-shadow);
-}
-
-.searchmodalshadow {
-    box-shadow: 4px 0px 24px var(--modal-shadow);
-}
-
-.modalhover:hover {
-    background-color: var(--border-color);
-}
-
-.toggleBg {
-    background-color: var(--toggle-btn);
-}
-
-.borderlight {
-    background-color: var(--border-color);
-}
-
-img,
-a:hover {
-    cursor: pointer;
-}
-
-ul li {
-    list-style: none;
+.font-inter {
+    font-family: 'Inter', sans-serif;
 }

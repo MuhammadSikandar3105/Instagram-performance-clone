@@ -1,26 +1,20 @@
 import React, { Suspense } from "react";
 const Navbar = React.lazy(() => import("./components/organisms/Header/Navbar"));
 import { Outlet } from "react-router-dom";
-import { useSelector } from "react-redux";
 import Usescreensize from "../src/lib/hooks/Usescreensize";
-import usemodal from "./lib/hooks/usemodal";
+import { useSelector } from "react-redux";
 
 function App() {
-  const { closemodal } = usemodal();
-  const darktheme = useSelector((state) => state.theme.darktheme);
+  const { active } = useSelector((state) => state.active);
+  console.log(active);
   Usescreensize();
   return (
     <div
-      onClick={(e) => {
-        e.stopPropagation();
-        closemodal();
-      }}
       className={`${
-        darktheme && "darkmode"
-      } text-secondary min-h-screen bg-primary`}
+        active === "/" ? "text-primary" : "text-secondary"
+      } font-inter min-h-screen bg-primary`}
     >
-      {/* //add simmer effect on this */}
-      <Suspense fallback={<div className="text-2xl">Loading...</div>}>
+      <Suspense>
         <Navbar />
       </Suspense>
       <Outlet />
