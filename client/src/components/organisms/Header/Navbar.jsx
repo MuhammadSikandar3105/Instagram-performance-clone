@@ -1,5 +1,5 @@
 import React, { Suspense, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Navlogo,
   Hamberger,
@@ -21,15 +21,22 @@ import {
   NotifiModal,
   CreateModal,
   MobileNav,
+  iscreatemodal,
 } from "./index.js";
 import usemodal from "../../../lib/hooks/usemodal.js";
 
 const Navbar = () => {
   const { openmodal, goback } = usemodal(); // custom hook to update modalSlice
   const { activemodal } = useSelector((state) => state.modal);
+  const { createmodal } = useSelector((state) => state.createModal);
   const { largescreen, ipad, mobile } = useSelector((state) => state.screen);
   const navbarRef = useRef(null);
+  const dispatch = useDispatch();
   const { width } = useWidth(navbarRef); // custom hook to check ele width
+
+  const modalhandleClick = (modalName) => {
+    dispatch(iscreatemodal({ modalName }));
+  };
 
   return (
     <>
@@ -37,6 +44,7 @@ const Navbar = () => {
         <MobileNav />
       ) : (
         <section
+          onClick={(e) => !createmodal && e.stopPropagation()}
           className={`fixed ${flex} w-[244px] h-[100vh] shrink-0 grow-0 font-normal`}
         >
           <nav
@@ -56,7 +64,7 @@ const Navbar = () => {
               <Reels />
               <Message />
               <Notification openmodal={openmodal} />
-              <Create openmodal={openmodal} />
+              <Create openmodal={modalhandleClick} />
               <Profile />
             </ul>
             <ul className="w-full flex flex-col justify-center gap-1 content-start">
@@ -77,8 +85,12 @@ const Navbar = () => {
                     {activemodal === "Notifications" && (
                       <NotifiModal navbarWidth={width} />
                     )}
-                    {activemodal === "Create" && <CreateModal />}
                   </Modal>
+                </Suspense>
+              )}
+              {createmodal && (
+                <Suspense>
+                  <Modal>{createmodal === "Create" && <CreateModal />}</Modal>
                 </Suspense>
               )}
             </ul>

@@ -2,6 +2,7 @@ import React from "react";
 
 // redux imports
 import { darktheme2 } from "../../../../src/store/slices/themeslice.js";
+import { iscreatemodal } from "../../../store/slices/createmodalslice.js";
 // Chiled Components
 const MoreModal = React.lazy(() => import("./HeaderModal/MoreModal/MoreModal.jsx"))
 const ApearenceModal = React.lazy(() => import("./HeaderModal/MoreModal/ApearenceModal.jsx"))
@@ -25,5 +26,5 @@ import Logo from "../../../assets/svg/NavbarIcons/Logo.jsx";
 import RoutesIcons, { ThreadsIcon } from "../../../assets/svg/NavbarIcons/RoutesIcons.jsx";
 import { ProfileIcon } from "../../../assets/svg/NavbarIcons/RoutesIcons";
 // all exports
-export { Notification, ProfileIcon, Input, SearchInput, MobileNav, ThreadsIcon, NotifiModal, CreateModal, Home, Explore, Reels, Message, Create, Profile, Threads, List, Logo, useWidth, usemodal, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, darktheme2, RoutesIcons };
+export { Notification, iscreatemodal, ProfileIcon, Input, SearchInput, MobileNav, ThreadsIcon, NotifiModal, CreateModal, Home, Explore, Reels, Message, Create, Profile, Threads, List, Logo, useWidth, usemodal, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, darktheme2, RoutesIcons };
 

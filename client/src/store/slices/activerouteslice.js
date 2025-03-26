@@ -11,5 +11,5 @@ const slice = createSlice({
     }
 })
 
-export const { activeRoute, prevActiveRoute } = slice.actions
+export const { activeRoute } = slice.actions
 export default slice.reducer

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
-import { activeRoute } from "./index";
+import { activeRoute, usemodal } from "./index";
 
 const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   const buttonRef = useRef(null);
@@ -11,7 +11,7 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   const { active } = useSelector((state) => state.active);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
-
+  const { closemodal } = usemodal();
   const handleClick = (e) => {
     // if modal user want to open modal then not change route
     if (handleModal) {
@@ -22,6 +22,7 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   };
   // when pathname change then update acitveroute
   useEffect(() => {
+    closemodal();
     dispatch(activeRoute(pathname.split("/")[1] || "/")); //add '/' for home route
   }, [pathname]);
 

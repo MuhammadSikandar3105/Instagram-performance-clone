@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeModal, goPrevious, isModalOpen } from "../../store/slices/modalslice";
 import { activeRoute } from "../../components/molecules";
 import { useLocation } from "react-router-dom";
+import { closecreatemodal } from "../../store/slices/createmodalslice";
 
 
 const usemodal = () => {
     const { activemodal } = useSelector(state => state.modal)
+    const { createmodal } = useSelector(state => state.createModal)
     // const { prevActive } = useSelector(state => state.active)
     const dispatch = useDispatch()
     const location = useLocation()
@@ -42,8 +44,14 @@ const usemodal = () => {
             dispatch(activeRoute(location.pathname.split('/')[1] || '/'))
         }
     }, [dispatch, activemodal])
+    const closecreate = useCallback(() => {
+        if (createmodal !== null) {
+            dispatch(closecreatemodal())
+            dispatch(activeRoute(location.pathname.split('/')[1] || '/'))
+        }
+    }, [dispatch, createmodal])
 
-    return { openmodal, goback, closemodal };
+    return { openmodal, goback, closemodal, closecreate };
 };
 
 export default usemodal

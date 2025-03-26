@@ -51,9 +51,9 @@ const MoreModalIcons = React.memo(({ name }) => {
           fill="none"
           points="20.643 3.357 12 12 3.353 20.647"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
         ></polyline>
         <line
           fill="none"
@@ -125,7 +125,7 @@ export const Gragphotos = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Icon to represent media such as images or videos"
-      class="x1lliihq x1n2onr6 x5n08af"
+      className="x1lliihq x1n2onr6 x5n08af"
       fill="currentColor"
       height="77"
       role="img"
@@ -151,7 +151,7 @@ export const Gragphotos = () => {
 
 <svg
   aria-label="Close"
-  class="x1lliihq x1n2onr6 x9bdzbf"
+  className="x1lliihq x1n2onr6 x9bdzbf"
   fill="currentColor"
   height="18"
   role="img"

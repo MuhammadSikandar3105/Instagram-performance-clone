@@ -22,15 +22,7 @@
     --links-color: #00376B;
     --dark-color: rgb(40, 39, 39);
     --visited-color: rgb(9, 9, 9);
-
-    /* gradient color */
-    --gradient-lavender: rgb(211, 0, 197);
-    --gradient-orange: rgb(255, 122, 0);
-    --gradient-pink: rgb(255, 1, 105);
-    --gradient-purple: rgb(118, 56, 250);
-    --gradient-red: rgb(255, 48, 64);
-    --gradient-yellow: rgb(255, 214, 0);
-    /* background: linear-gradient(circle, rgb(238 1 142), rgb(254 123 11), rgb(87 9 28)); */
+    --blue-color: #0095F6;
 }
 
 .darkmode {
@@ -47,6 +39,7 @@
     --btn-color: rgb(115, 115, 115, 1);
     --hover-color: rgba(54, 54, 54, 0.378);
     --visited-color: rgb(224, 241, 255);
+    --blue-color: #0095F6;
 }
 
 ::-webkit-scrollbar {
@@ -84,6 +77,14 @@
 
 .btn-color {
     color: var(--btn-color);
+}
+
+.text-blue {
+    color: var(--blue-color);
+}
+
+:hover.text-blue {
+    color: var(--secondary-color);
 }
 
 .lightGray {
