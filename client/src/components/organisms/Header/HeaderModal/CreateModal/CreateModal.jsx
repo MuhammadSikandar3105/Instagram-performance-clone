@@ -1,24 +1,39 @@
-import React, { Suspense, useState } from "react";
-import { CreatePosition, Gragphotos, RoutesIcons } from "./index";
-const CreateModal = ({ navbarWidth }) => {
-  const [pic, setPic] = useState(null);
+import React, { Suspense } from "react";
+import {
+  CreatePosition,
+  Gragphotos,
+  isdiscardmodal,
+  newdata,
+  RoutesIcons,
+} from "./index";
+import { useDispatch, useSelector } from "react-redux";
+import DiscardModal from "./DiscardModal";
+import Modal from "../../../../molecules/Modal/Modal";
+
+const CreateModal = () => {
+  const { discardmodal } = useSelector((state) => state.createModal);
+  const { pic } = useSelector((state) => state.createForm);
+  const dispatch = useDispatch();
 
   const onChange = (e) => {
-    console.log(e.target.files[0]);
     let file = e.target.files[0];
     if (file) {
       const imageurl = URL.createObjectURL(file);
-      setPic(imageurl);
+      dispatch(newdata({ pic: imageurl }));
     }
   };
-  console.log(pic);
   return (
-    <CreatePosition navbarWidth={navbarWidth}>
+    <CreatePosition>
       <Suspense>
         {pic ? (
           <>
             <div className="flex justify-between p-3">
-              <p className="cursor-pointer">
+              <p
+                className="cursor-pointer"
+                onClick={() =>
+                  dispatch(isdiscardmodal({ modalname: "Discard" }))
+                }
+              >
                 <RoutesIcons name="arrow" />
               </p>
               <p className="">Crop</p>
@@ -50,6 +65,11 @@ const CreateModal = ({ navbarWidth }) => {
               </label>
             </div>
           </>
+        )}
+        {discardmodal && (
+          <Suspense>
+            <Modal>{discardmodal && <DiscardModal />}</Modal>
+          </Suspense>
         )}
       </Suspense>
     </CreatePosition>

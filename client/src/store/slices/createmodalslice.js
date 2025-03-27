@@ -4,6 +4,7 @@ const slice = createSlice({
     name: 'createModal',
     initialState: {
         createmodal: null, //now active
+        discardmodal: null,
         modalhistory: [] // save history for back to previous modal
     },
     reducers: {
@@ -12,8 +13,15 @@ const slice = createSlice({
             state.createmodal = modalName
             state.modalhistory = modalName
         },
+        isdiscardmodal(state, action) {
+            const { modalname } = action.payload
+            state.discardmodal = modalname
+        },
         gopreviousmoda(state) {
             state.createmodal = state.modalhistory
+        },
+        closediscard(state) {
+            state.discardmodal = null
         },
         closecreatemodal(state) {
             state.createmodal = null
@@ -22,5 +30,5 @@ const slice = createSlice({
     }
 })
 
-export const { iscreatemodal, gopreviousmoda, closecreatemodal } = slice.actions
+export const { iscreatemodal, isdiscardmodal, gopreviousmoda, closediscard, closecreatemodal } = slice.actions
 export default slice.reducer

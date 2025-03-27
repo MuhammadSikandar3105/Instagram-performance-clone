@@ -11,7 +11,7 @@
     --primary-color: rgb(255, 255, 255);
     --secondary-color: #000000;
     --border-color: #dbdbdb;
-    --modal-bg: rgba(255, 255, 255, 0.895);
+    --modal-bg: rgb(255, 255, 255);
     --modal-shadow: rgb(0, 0, 0, 0.15);
     --toggle-btn: #dbdfe4;
     --gray-color: rgb(37, 37, 37);
