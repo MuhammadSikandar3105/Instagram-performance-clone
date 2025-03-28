@@ -1,3 +1,4 @@
+import React from "react";
 import SearchInput from "../../../../molecules/SearchInput";
 import CreatePosition from "./CreatePositon";
 import { Gragphotos } from "../../../../../assets/svg/NavbarIcons/MoreModalIcons";
@@ -6,5 +7,7 @@ import { RoutesIcons } from "../../../../molecules";
 import { newdata } from "../../../../../store/slices/createFormslice";
 import { closediscard } from "../../../../../store/slices/createmodalslice";
 import { isdiscardmodal } from "../../../../../store/slices/createmodalslice";
+import { Modal } from "../../index";
+const DiscardModal = React.lazy(() => import('./DiscardModal'))
 
-export { SearchInput, newdata, isdiscardmodal, closediscard, RoutesIcons, CreatePosition, Gragphotos, MoreModalIcons }
+export { SearchInput, Modal, DiscardModal, newdata, isdiscardmodal, closediscard, RoutesIcons, CreatePosition, Gragphotos, MoreModalIcons }

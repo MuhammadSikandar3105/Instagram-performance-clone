@@ -1,14 +1,14 @@
 import React, { Suspense } from "react";
 import {
   CreatePosition,
+  DiscardModal,
   Gragphotos,
   isdiscardmodal,
+  Modal,
   newdata,
   RoutesIcons,
 } from "./index";
 import { useDispatch, useSelector } from "react-redux";
-import DiscardModal from "./DiscardModal";
-import Modal from "../../../../molecules/Modal/Modal";
 
 const CreateModal = () => {
   const { discardmodal } = useSelector((state) => state.createModal);
