@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import {
   CreatePosition,
   DiscardModal,
@@ -9,8 +9,10 @@ import {
   RoutesIcons,
 } from "./index";
 import { useDispatch, useSelector } from "react-redux";
+import PostForm from "./PostForm";
 
 const CreateModal = () => {
+  const [isform, setIsform] = useState(false);
   const { discardmodal } = useSelector((state) => state.createModal);
   const { pic } = useSelector((state) => state.createForm);
   const dispatch = useDispatch();
@@ -22,12 +24,17 @@ const CreateModal = () => {
       dispatch(newdata({ pic: imageurl }));
     }
   };
+
+  const handleNextClick = () => {
+    setIsform((prev) => !prev);
+  };
+
   return (
-    <CreatePosition>
+    <CreatePosition isform={isform}>
       <Suspense>
         {pic ? (
           <>
-            <div className="flex justify-between p-3">
+            <div className="flex justify-between py-3 px-5">
               <p
                 className="cursor-pointer"
                 onClick={() =>
@@ -36,12 +43,25 @@ const CreateModal = () => {
               >
                 <RoutesIcons name="arrow" />
               </p>
-              <p className="">Crop</p>
-              <p className="cursor-pointer text-blue">Next</p>
+              {isform ? (
+                <p className="font-semibold">Crate new post</p>
+              ) : (
+                <p className="">Crop</p>
+              )}
+              {/* next btns */}
+              {isform ? (
+                <p className="cursor-pointer text-blue font-semibold">Share</p>
+              ) : (
+                <p
+                  className="cursor-pointer text-blue font-semibold"
+                  onClick={handleNextClick}
+                >
+                  Next
+                </p>
+              )}
             </div>
-            <div className="absolute w-[60%] overflow-hidden h-full top-1/2 left-1/2 -translate-1/2 flex justify-center items-end flex-col">
-              <img src={pic} className="object-top" alt="selected-image" />
-            </div>
+            <div className="h-[1px] w-[calc(100%)] borderlight"></div>
+            <PostForm pic={pic} isform={isform} />
           </>
         ) : (
           <>

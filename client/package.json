@@ -7,13 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json-server": "json-server db.json --watch"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
+    "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-easy-crop": "^5.4.1",
     "react-icons": "^5.4.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.2"
