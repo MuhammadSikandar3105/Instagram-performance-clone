@@ -6,6 +6,7 @@ import activeReduceer from './slices/activerouteslice'
 import navbarReducer from './slices/navbarwidthslice'
 import createModalReducer from './slices/createmodalslice'
 import createformReducer from './slices/createFormslice'
+import { api } from './slices/apislice'
 
 export const store = configureStore({
     reducer: {
@@ -15,9 +16,10 @@ export const store = configureStore({
         active: activeReduceer,
         navWidth: navbarReducer,
         createModal: createModalReducer,
-        createForm: createformReducer
+        createForm: createformReducer,
+        [api.reducerPath]: api.reducer
 
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware()
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware)
 })
 

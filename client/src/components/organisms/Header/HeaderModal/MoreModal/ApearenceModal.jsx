@@ -1,5 +1,11 @@
 import React, { Suspense } from "react";
-import { Back, MoreModalIcons, MoreModalPosition, darktheme2 } from "./index";
+import {
+  Back,
+  MoreModalIcons,
+  MoreModalPosition,
+  SwitchButton,
+  darktheme2,
+} from "./index";
 import { useDispatch, useSelector } from "react-redux";
 
 const ApearenceModal = ({ goback }) => {
@@ -38,17 +44,7 @@ const ApearenceModal = ({ goback }) => {
             onClick={handleclick}
           >
             <p>Dark mode</p>
-            <div
-              className={`cursor-pointer flex w-4 h-4 toggleBg ${
-                darktheme ? "justify-start" : "justify-end"
-              } items-center rounded-[10px] py-0 px-3`}
-            >
-              <div
-                className={`rounded-[10px] w-1 p-[6px] -mx-[2px] h-1 ${
-                  darktheme ? "bg-black" : "bg-white"
-                }`}
-              ></div>
-            </div>
+            <SwitchButton condition={darktheme} />
           </div>
         </div>
       </Suspense>
