@@ -6,7 +6,7 @@ const CreatePosition = ({ children, isform }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
 
   return (
-    <div className="bg-[#00000076] w-full h-full absolute top-1/2 -translate-y-1/2">
+    <div className="bg-[#00000076] w-full h-full fixed top-1/2 -translate-y-1/2">
       <div
         className={`${
           isform ? "max-w-[857px]" : "max-w-[557px]"

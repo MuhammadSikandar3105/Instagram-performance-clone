@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Usescreensize from "../src/lib/hooks/Usescreensize";
 import usemodal from "./lib/hooks/usemodal";
-import { closediscard, isdiscardmodal } from "./Index";
+import { closediscard, isdiscardmodal, newdata } from "./Index";
 
 function App() {
   const { closemodal, closecreate } = usemodal();

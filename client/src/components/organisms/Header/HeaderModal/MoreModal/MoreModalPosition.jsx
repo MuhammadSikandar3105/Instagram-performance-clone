@@ -50,7 +50,7 @@ const MoreModalPosition = ({ children }) => {
     <div
       onClick={(e) => e.stopPropagation()}
       ref={modalref}
-      className={`modalbg bg-border text-secondary w-full modalshadow absolute rounded-[16px] p-2 h-auto max-w-[266px] ${
+      className={`modalbg bg-border text-secondary w-full modalshadow fixed rounded-[16px] p-2 h-auto max-w-[266px] ${
         darkTheme && "darkmode"
       }`}
       style={{

@@ -8,12 +8,12 @@ import {
   Modal,
   newdata,
   okimage,
+  PostForm,
   RoutesIcons,
   useAddpostMutation,
   useGetpostsQuery,
 } from "./index";
 import { useDispatch, useSelector } from "react-redux";
-import PostForm from "./PostForm";
 
 const CreateModal = () => {
   const [isform, setIsform] = useState(false);
@@ -46,7 +46,6 @@ const CreateModal = () => {
   const [addpost] = useAddpostMutation();
   const handleSubmitclick = () => {
     setIssubmited((prev) => !prev);
-    setIsform(!isform);
     dispatch(newdata({ pic: null }));
     addpost(data);
   };
@@ -56,7 +55,8 @@ const CreateModal = () => {
     setTimeout(() => {
       setIssuccess(true);
     }, 2000);
-  }, [issubmited]);
+    setIsform(false);
+  }, [issubmited, pic]);
 
   return (
     <CreatePosition isform={isform}>

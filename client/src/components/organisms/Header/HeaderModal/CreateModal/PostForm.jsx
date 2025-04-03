@@ -124,7 +124,6 @@ const Input = ({ name, data, setData }) => {
 };
 
 const Setting = ({ name, data, heading, disc, setData }) => {
-  console.log(data[name]);
   return (
     <div className="py-3">
       <div className="flex items-center justify-between">
