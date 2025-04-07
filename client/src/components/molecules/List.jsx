@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
-import { activeRoute, usemodal } from "./index";
+import { activeRoute, proimg, usemodal } from "./index";
 
 const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   const buttonRef = useRef(null);
@@ -36,11 +36,27 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
       ref={buttonRef}
     >
       <div
-        className={`nav-link navbar-item flex flex-row items-center gap-4 ${
+        className={`nav-link navbar-item flex flex-row items-center ${
+          spanname === "Profile" ? "gap-3" : "gap-4"
+        } ${
           ipad || mobile ? "justify-center" : "justify-start"
-        } max-w-[100%] focus:outline-none focus:bg-transparent active`}
+        } max-w-full focus:outline-none focus:border-none focus:bg-transparent active`}
       >
-        <div>{Icon}</div>
+        {spanname !== "Profile" ? (
+          <div>{Icon}</div>
+        ) : (
+          <div
+            className={`relative rounded-full p-1 w-7 h-7 overflow-hidden  ${
+              active === "profile" && "bordersecondary border-2"
+            }`}
+          >
+            <img
+              src={proimg}
+              className="absolute top-1/2 left-1/2 -translate-1/2 "
+              alt=""
+            />
+          </div>
+        )}
         {largescreen && !laptop && spanname && (
           <span
             className={`${

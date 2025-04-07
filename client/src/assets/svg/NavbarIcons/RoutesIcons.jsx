@@ -319,29 +319,5 @@ export const ThreadsIcon = () => {
     </svg>
   );
 };
-export const ProfileIcon = ({ name }) => {
-  const { active } = useSelector((state) => state.active);
-  let isActive = active === name;
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="profile"
-      className="x1lliihq x1n2onr6 x5n08af"
-      fill={isActive ? "currentColor" : "none"}
-      height="24"
-      role="img"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <title>profile</title>
-      <circle cx="13" cy="6.25" r="4" stroke="currentColor" strokeWidth="2.2" />
-      <path
-        d="M6.26678 23.95H19.744C21.603 23.75 22.5 23.2186 22.5 22.0673C22.5 21.3712 18.8038 15.75 13 15.75C7.19625 15.75 3.5 19.3712 3.5 22.0673C3.5 23.2186 4.39704 23.75 6.26678 23.75Z"
-        stroke="currentColor"
-        strokeWidth="2.2"
-      />
-    </svg>
-  );
-};
 
 export default RoutesIcons;

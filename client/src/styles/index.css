@@ -9,20 +9,20 @@
 /* end */
 :root {
     --primary-color: rgb(255, 255, 255);
-    --secondary-color: #000000;
-    --border-color: #dbdbdb;
+    --secondary-color: rgb(0, 0, 0);
+    --border-color: rgb(219, 219, 219);
     --modal-bg: rgb(255, 255, 255);
     --modal-shadow: rgb(0, 0, 0, 0.15);
-    --toggle-btn: #dbdfe4;
+    --toggle-btn: rgb(219, 223, 228);
     --gray-color: rgb(37, 37, 37);
     --btn-color: rgb(119, 119, 119, 1);
     --bgborder-color: rgb(85, 85, 85, 0.3);
-    --light-gray: #737373;
-    --hover-color: #dbdbdb57;
-    --links-color: #00376B;
+    --light-gray: rgb(115, 115, 115);
+    --hover-color: rgba(219, 219, 219, 0.341);
+    --links-color: rgb(0, 55, 107);
     --dark-color: rgb(40, 39, 39);
     --visited-color: rgb(9, 9, 9);
-    --blue-color: #0095F6;
+    --blue-color: rgb(0, 149, 246);
 }
 
 .darkmode {
@@ -95,6 +95,10 @@
     border-color: var(--border-color);
 }
 
+.border-top {
+    border-top-color: var(--border-color);
+}
+
 .bordertopnav {
     border-color: var(--border-color);
 }
@@ -109,6 +113,10 @@
 
 .crossbg {
     background-color: var(--gray-color);
+}
+
+.graytext {
+    color: var(--gray-color);
 }
 
 .borderColor {
@@ -137,6 +145,10 @@
 
 .borderlight {
     background-color: var(--border-color);
+}
+
+.bordersecondary {
+    border-color: var(--secondary-color);
 }
 
 img,

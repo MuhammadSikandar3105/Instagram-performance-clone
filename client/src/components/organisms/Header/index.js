@@ -24,7 +24,7 @@ import { Home, Search, Explore, Reels, Message, Notification, Create, Profile, T
 // Icons components
 import Logo from "../../../assets/svg/NavbarIcons/Logo.jsx";
 import RoutesIcons, { ThreadsIcon } from "../../../assets/svg/NavbarIcons/RoutesIcons.jsx";
-import { ProfileIcon } from "../../../assets/svg/NavbarIcons/RoutesIcons";
+import { UtilityIcons24 } from "../../../../../client/src/assets/svg/NavbarIcons/utilityIcons.jsx";
 // all exports
-export { Notification, iscreatemodal, ProfileIcon, Input, SearchInput, MobileNav, ThreadsIcon, NotifiModal, CreateModal, Home, Explore, Reels, Message, Create, Profile, Threads, List, Logo, useWidth, usemodal, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, darktheme2, RoutesIcons };
+export { Notification, UtilityIcons24, iscreatemodal, Input, SearchInput, MobileNav, ThreadsIcon, NotifiModal, CreateModal, Home, Explore, Reels, Message, Create, Profile, Threads, List, Logo, useWidth, usemodal, Search, MoreModal, ApearenceModal, SeachModal, Modal, flex, Navlogo, Hamberger, darktheme2, RoutesIcons };
 

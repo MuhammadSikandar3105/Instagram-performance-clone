@@ -19,8 +19,8 @@ const usemodal = () => {
             if (buttonRef?.current) {
                 const rect = buttonRef.current.getBoundingClientRect();
                 const position = {
-                    top: rect.top + window.scrollY,
-                    left: rect.left + window.scrollX,
+                    top: rect.top,
+                    left: rect.left,
                     height: rect.height,
                     width: rect.width
                 }
