@@ -8,7 +8,11 @@ const MainContent = ({ children }) => {
   return (
     <div
       className=""
-      style={ipad || mobile ? { marginTop: "60px" } : { marginLeft: width }}
+      style={
+        ipad || mobile
+          ? { marginTop: "60px", padding: "0 4px" }
+          : { marginLeft: width }
+      }
     >
       {children}
     </div>

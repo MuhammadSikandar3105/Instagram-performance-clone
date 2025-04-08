@@ -1,14 +1,15 @@
 import React from "react";
-import { MainContent } from "./index";
+import { FriendsSugg, MainContent, Posts } from "./index";
 
-const Home = React.memo(() => {
+const Home = () => {
   return (
-    <>
-      <MainContent>
-        <h1 className="text-center">Home</h1>
-      </MainContent>
-    </>
+    <MainContent>
+      <div className="flex justify-center items-start">
+        <Posts />
+        <FriendsSugg />
+      </div>
+    </MainContent>
   );
-});
+};
 
 export default Home;

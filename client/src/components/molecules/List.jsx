@@ -36,9 +36,7 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
       ref={buttonRef}
     >
       <div
-        className={`nav-link navbar-item flex flex-row items-center ${
-          spanname === "Profile" ? "gap-3" : "gap-4"
-        } ${
+        className={`nav-link navbar-item flex flex-row items-center gap-4 ${
           ipad || mobile ? "justify-center" : "justify-start"
         } max-w-full focus:outline-none focus:border-none focus:bg-transparent active`}
       >
@@ -46,7 +44,7 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
           <div>{Icon}</div>
         ) : (
           <div
-            className={`relative rounded-full p-1 w-7 h-7 overflow-hidden  ${
+            className={`relative rounded-full p-1 w-6 h-6 overflow-hidden  ${
               active === "profile" && "bordersecondary border-2"
             }`}
           >
