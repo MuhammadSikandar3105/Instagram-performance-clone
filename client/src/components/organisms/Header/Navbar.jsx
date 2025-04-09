@@ -45,13 +45,13 @@ const Navbar = () => {
       ) : (
         <section
           onClick={(e) => !createmodal && e.stopPropagation()}
-          className={`fixed ${flex} w-[244px] h-[100vh] shrink-0 grow-0 font-normal`}
+          className={`fixed ${flex} w-[${width}px] h-[100vh] shrink-0 grow-0 font-normal`}
         >
           <nav
             ref={navbarRef}
             id="navbar-sec"
             className={`navbar-sec px-3 relative pb-5 pt-2 ${flex} h-full ${
-              largescreen ? "w-full" : "w-fit"
+              largescreen ? "w-[244px]" : "w-fit"
             }  justify-between border border-r-[1px]
           navbar-expand bg-body-dark`}
             data-bs-theme="dark"

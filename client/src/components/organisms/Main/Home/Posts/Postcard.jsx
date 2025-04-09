@@ -1,36 +1,33 @@
 import React from "react";
-import { Liked, proimg, UtilityIcons24 } from "./index";
+import {
+  Liked,
+  Proimage,
+  proimg,
+  Proname,
+  thankyou,
+  UtilityIcons24,
+} from "./index";
 
 const Postcard = () => {
   return (
-    <div className="flex flex-col items-center justify-center max-w-[360px] border-l-0 border-r-0 border-t border-b py-3 border w-full ">
+    <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full ">
       <div className="header w-full pb-3 pl-1 flex justify-between items-center">
         <div className="profile flex items-center justify-center">
-          <div
-            className={`relative mr-2 rounded-full p-1 w-6 h-6 overflow-hidden`}
-          >
-            <img
-              src={proimg}
-              className="absolute top-1/2 left-1/2 -translate-1/2"
-              alt=""
-            />
-          </div>
+          <Proimage image={proimg} />
           <div className="proname flex flex-col items-start justify-start">
-            <p className="text-sm text-secondary font-semibold">malik786</p>
+            <Proname name="Mr.Malik2189" />
             <p className="text-xs">Original audio</p>
           </div>
         </div>
-        <div className="hamberger cursor-pointer">
-          <UtilityIcons24 name="more" size="24" />
-        </div>
+        <MoreBtn />
       </div>
       <div className="flex w-full items-center justify-center ">
-        <div className="relative max-w-[360px] pb-[125%] overflow-hidden bg-black h-auto overflow-x-hidden-hidden w-full">
-          <div className="w-full absolute top-0 left-0 ">
+        <div className="relative max-w-[470px] w-full pb-[125%] rounded-sm overflow-hidden bg-black h-auto overflow-x-hidden-hidden">
+          <div className="w-full absolute top-1/2 left-1/2 -translate-1/2 ">
             <img
               src={proimg}
               alt="post image"
-              className="object-contain object-center w-full"
+              className="object-contain object-center w-fit"
             />
           </div>
         </div>
@@ -79,6 +76,18 @@ const Postcard = () => {
           Post
         </div>
       </div>
+    </div>
+  );
+};
+
+const MoreBtn = () => {
+  const handleClick = () => {
+    console.log("moreClicked");
+  };
+
+  return (
+    <div onClick={handleClick} className="hamberger cursor-pointer">
+      <UtilityIcons24 name="more" size="24" />
     </div>
   );
 };

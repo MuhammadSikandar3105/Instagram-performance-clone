@@ -31,7 +31,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <nav className="top-nav text-secondary bg-primary px-4 h-[60px] border-b bordertopnav flex items-center justify-between w-full fixed top-0 right-0">
+      <nav className="top-nav text-secondary bg-primary z-10 px-4 h-[60px] border-b bordertopnav flex items-center justify-between w-full fixed top-0 right-0">
         <Navlogo classes="ms-0" />
         <div className="sideNav w-full flex items-center justify-end gap-2">
           {searchinput && (
@@ -42,7 +42,7 @@ const MobileNav = () => {
           </div>
         </div>
       </nav>
-      <div className="bottomNav border-t bordertopnav fixed bottom-0 right-0 w-full flex items-center justify-evenly">
+      <div className="bottomNav border-t text-secondary bg-primary z-10 bordertopnav fixed bottom-0 right-0 w-full flex items-center justify-evenly">
         <Home />
         <Explore />
         <Reels />

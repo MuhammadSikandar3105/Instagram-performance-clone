@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 const MainContent = ({ children }) => {
   const { width } = useSelector((state) => state.navWidth);
-  const { ipad, mobile } = useSelector((state) => state.screen);
-  useEffect(() => {}, [ipad]);
+  const { ipad, mobile, largescreen, laptop } = useSelector(
+    (state) => state.screen
+  );
   return (
     <div
       className=""
