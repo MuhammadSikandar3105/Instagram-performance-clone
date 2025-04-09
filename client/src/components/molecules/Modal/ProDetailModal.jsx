@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { proimg, RoutesIcons } from "../index";
+import { useSelector } from "react-redux";
 
 const ProDetailModal = React.memo(({ position }) => {
+  const darkTheme = useSelector((state) => state.theme.darktheme);
+
   return (
     <div
-      className={`rounded-lg w-[366px] dark flex flex-col gap-3 py-4 h-auto absolute text-sm font-semibold`}
-      style={{ top: position.top, left: position.left }}
+      className={`${
+        darkTheme && "darkmode"
+      } rounded-lg w-[366px] dark flex flex-col gap-3 py-4 h-auto fixed text-sm font-semibold`}
+      style={
+        position.top < "418"
+          ? { top: position.top, left: position.left }
+          : {
+              bottom: window.innerHeight - position.bottom,
+              left: position.left,
+            }
+      }
     >
       <div className="w-full px-4 flex items-center justify-start gap-2">
         <div
@@ -52,7 +64,7 @@ const ProDetailModal = React.memo(({ position }) => {
           <RoutesIcons name="messages" size="18" />{" "}
           <span className="">Message</span>
         </button>
-        <button className="max-w-[200px] cursor-pointer py-2 bg-gray-300 rounded-lg w-full flex flex-col items-center justify-center">
+        <button className="max-w-[200px] cursor-pointer py-2 bg-gray-300 text-black rounded-lg w-full flex flex-col items-center justify-center">
           Following
         </button>
       </div>

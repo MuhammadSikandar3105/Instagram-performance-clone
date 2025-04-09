@@ -1,25 +1,12 @@
-import React, { Suspense, useRef, useState } from "react";
+import React, { Suspense, useRef } from "react";
 import { Modal, ProDetailModal } from "./index";
+import { useProModal } from "../../lib/hooks/useProModal";
 
 const Proname = ({ name }) => {
-  const [ismodal, setIsmodal] = useState(false);
-  const [position, setPosition] = useState({ left: "0", top: "0" });
   const nameRef = useRef(null);
-  const timeoutRef = useRef(null);
+  const [ismodal, position, handleMouseEnter, handleMouseLeave] =
+    useProModal(nameRef);
 
-  const handleMouseEnter = () => {
-    clearTimeout(timeoutRef.current);
-    if (nameRef.current) {
-      const rect = nameRef.current.getBoundingClientRect();
-      setPosition({ left: rect.left, top: rect.top + rect.height });
-    }
-    setIsmodal(true);
-  };
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsmodal(false);
-    }, 150);
-  };
   return (
     <>
       <div
