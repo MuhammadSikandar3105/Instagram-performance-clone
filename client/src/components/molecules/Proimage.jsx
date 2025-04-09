@@ -1,13 +1,14 @@
-import React, { useRef, useState } from "react";
-import ProDetailModal from "./Modal/ProDetailModal";
-import Modal from "./Modal/Modal";
+import React, { Suspense, useRef, useState } from "react";
+import { Modal, ProDetailModal } from "./index";
 
 const Proimage = ({ image }) => {
   const [ismodal, setIsmodal] = useState(false);
   const [position, setPosition] = useState({ left: "0", top: "0" });
   const imageRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
     if (imageRef.current) {
       const rect = imageRef.current.getBoundingClientRect();
       setPosition({ left: rect.left, top: rect.top + rect.height });
@@ -15,7 +16,9 @@ const Proimage = ({ image }) => {
     setIsmodal(true);
   };
   const handleMouseLeave = () => {
-    setIsmodal(false);
+    timeoutRef.current = setTimeout(() => {
+      setIsmodal(false);
+    }, 150);
   };
   return (
     <>
@@ -33,7 +36,11 @@ const Proimage = ({ image }) => {
       </div>
       {ismodal && (
         <Modal>
-          <ProDetailModal position={position} />
+          <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Suspense>
+              <ProDetailModal position={position} />
+            </Suspense>
+          </div>
         </Modal>
       )}
     </>

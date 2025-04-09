@@ -1,13 +1,14 @@
-import React, { useRef, useState } from "react";
-import Modal from "./Modal/Modal";
-import ProDetailModal from "./Modal/ProDetailModal";
+import React, { Suspense, useRef, useState } from "react";
+import { Modal, ProDetailModal } from "./index";
 
 const Proname = ({ name }) => {
   const [ismodal, setIsmodal] = useState(false);
   const [position, setPosition] = useState({ left: "0", top: "0" });
   const nameRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
     if (nameRef.current) {
       const rect = nameRef.current.getBoundingClientRect();
       setPosition({ left: rect.left, top: rect.top + rect.height });
@@ -15,7 +16,9 @@ const Proname = ({ name }) => {
     setIsmodal(true);
   };
   const handleMouseLeave = () => {
-    setIsmodal(false);
+    timeoutRef.current = setTimeout(() => {
+      setIsmodal(false);
+    }, 150);
   };
   return (
     <>
@@ -29,7 +32,11 @@ const Proname = ({ name }) => {
       </div>
       {ismodal && (
         <Modal>
-          <ProDetailModal position={position} />
+          <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Suspense>
+              <ProDetailModal position={position} />
+            </Suspense>
+          </div>
         </Modal>
       )}
     </>

@@ -1,11 +1,10 @@
 import React from "react";
-import { proimg } from "../index";
+import { proimg, RoutesIcons } from "../index";
 
-const ProDetailModal = ({ position }) => {
+const ProDetailModal = React.memo(({ position }) => {
   return (
     <div
-      onMouseLeave={(e) => e.stopPropagation()}
-      className={`rounded-lg w-[366px] bg-primary text-secondary flex flex-col gap-3 py-4 h-auto absolute text-sm text-secondary cursor-pointer font-semibold`}
+      className={`rounded-lg w-[366px] dark flex flex-col gap-3 py-4 h-auto absolute text-sm font-semibold`}
       style={{ top: position.top, left: position.left }}
     >
       <div className="w-full px-4 flex items-center justify-start gap-2">
@@ -49,15 +48,16 @@ const ProDetailModal = ({ position }) => {
         </div>
       </div>
       <div className="w-full px-4 flex items-center justify-start gap-1">
-        <button className="max-w-[200px] py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex flex-col items-center justify-center">
-          Message
+        <button className="max-w-[200px] cursor-pointer text-white py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex gap-2 items-center justify-center">
+          <RoutesIcons name="messages" size="18" />{" "}
+          <span className="">Message</span>
         </button>
-        <button className="max-w-[200px] py-2 bg-gray-300 rounded-lg w-full flex flex-col items-center justify-center">
+        <button className="max-w-[200px] cursor-pointer py-2 bg-gray-300 rounded-lg w-full flex flex-col items-center justify-center">
           Following
         </button>
       </div>
     </div>
   );
-};
+});
 
 export default ProDetailModal;

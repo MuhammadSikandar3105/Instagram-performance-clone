@@ -1,7 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 
-const MoreModalPosition = ({ children }) => {
+const MoreModalPosition = React.memo(({ children }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
   const screensize = useSelector((state) => state.screen);
   const [position, setPosition] = useState({ top: 0, left: 0 });
@@ -61,6 +61,6 @@ const MoreModalPosition = ({ children }) => {
       {children}
     </div>
   );
-};
+});
 
 export default MoreModalPosition;

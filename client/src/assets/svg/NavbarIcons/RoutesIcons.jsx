@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const RoutesIcons = React.memo(({ name }) => {
+const RoutesIcons = React.memo(({ name, size }) => {
   const { active } = useSelector((state) => state.active);
   let isActive = active === name;
   const iconsPath = {
@@ -288,10 +288,10 @@ const RoutesIcons = React.memo(({ name }) => {
       aria-label={name}
       className="x1lliihq x1n2onr6 x5n08af"
       fill="currentColor"
-      height="24"
+      height={size || "24"}
       role="img"
       viewBox="0 0 24 24"
-      width="24"
+      width={size || "24"}
     >
       <title>{name}</title>
       {iconsPath[name] || null}

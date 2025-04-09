@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import { NotifiPosition, SearchInput } from "./index";
 const NotifiModal = ({ navbarWidth }) => {
   return (
-    <NotifiPosition navbarWidth={navbarWidth}>
-      <Suspense>
+    <Suspense>
+      <NotifiPosition navbarWidth={navbarWidth}>
         <div className="flex flex-col justify-between items-start">
           <div className="searchTag pt-3 pb-9 mt-2 pr-[14px] pl-6 mx-0">
             <h2 className="font-[600] text-2xl block w-full">Notifications</h2>
@@ -23,8 +23,8 @@ const NotifiModal = ({ navbarWidth }) => {
             </p>
           </div>
         </div>
-      </Suspense>
-    </NotifiPosition>
+      </NotifiPosition>
+    </Suspense>
   );
 };
 

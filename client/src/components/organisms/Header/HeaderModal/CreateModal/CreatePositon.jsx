@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { MoreModalIcons } from "./index";
 
-const CreatePosition = ({ children, isform }) => {
+const CreatePosition = React.memo(({ children, isform }) => {
   const darkTheme = useSelector((state) => state.theme.darktheme);
 
   return (
@@ -21,6 +21,6 @@ const CreatePosition = ({ children, isform }) => {
       </span>
     </div>
   );
-};
+});
 
 export default CreatePosition;

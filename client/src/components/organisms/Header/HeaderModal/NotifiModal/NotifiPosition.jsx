@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { islaptop, islarg } from "./index";
 
-const NotifiPosition = ({ children, navbarWidth }) => {
+const NotifiPosition = React.memo(({ children, navbarWidth }) => {
   const { activemodal } = useSelector((state) => state.modal);
   const darkTheme = useSelector((state) => state.theme.darktheme);
   const largescreen = useSelector((state) => state.screen.largescreen);
@@ -25,6 +25,6 @@ const NotifiPosition = ({ children, navbarWidth }) => {
       {children}
     </div>
   );
-};
+});
 
 export default NotifiPosition;

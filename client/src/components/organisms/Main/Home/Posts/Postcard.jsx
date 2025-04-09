@@ -10,7 +10,7 @@ import {
 
 const Postcard = () => {
   return (
-    <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full ">
+    <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full">
       <div className="header w-full pb-3 pl-1 flex justify-between items-center">
         <div className="profile flex items-center justify-center">
           <Proimage image={proimg} />
@@ -21,8 +21,8 @@ const Postcard = () => {
         </div>
         <MoreBtn />
       </div>
-      <div className="flex w-full items-center justify-center ">
-        <div className="relative max-w-[470px] w-full pb-[125%] rounded-sm overflow-hidden bg-black h-auto overflow-x-hidden-hidden">
+      <div className="flex w-full items-center justify-center">
+        <div className="relative max-w-[470px] w-full pb-[125%] cursor-grab! rounded-sm overflow-hidden bg-black h-auto">
           <div className="w-full absolute top-1/2 left-1/2 -translate-1/2 ">
             <img
               src={proimg}
@@ -32,7 +32,7 @@ const Postcard = () => {
           </div>
         </div>
       </div>
-      <div className="events w-full my-1 flex justify-between items-center">
+      <div className="w-full my-1 flex justify-between items-center">
         <div className="like flex">
           <div className="p-2 cursor-pointer">
             <UtilityIcons24 name="like" size="24" />

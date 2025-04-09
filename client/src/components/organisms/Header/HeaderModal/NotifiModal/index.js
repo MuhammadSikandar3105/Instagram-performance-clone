@@ -1,5 +1,6 @@
+import React from "react";
 import SearchInput from "../../../../molecules/SearchInput";
-import NotifiPosition from "./NotifiPosition";
+const NotifiPosition = React.lazy(() => import('./NotifiPosition'));
 import { islaptop, islarg } from "../../../../../store/slices/screensizeslice";
 
 
