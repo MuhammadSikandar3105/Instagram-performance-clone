@@ -1,6 +1,6 @@
 import React from 'react';
-import proimg from '../../../../../assets/svgs/IMG_4307.jpg'
-import thankyou from '../../../../../assets/svgs/instagramethankyou.gif'
+import proimg from '../../../../../assets/images/IMG_4307.jpg'
+import thankyou from '../../../../../assets/images/instagramethankyou.gif'
 import { UtilityIcons24 } from "../../../../../assets/svg/NavbarIcons/utilityIcons";
 import { Liked } from "../../../../../assets/svg/NavbarIcons/utilityIcons";
 import Postcard from "./Postcard";

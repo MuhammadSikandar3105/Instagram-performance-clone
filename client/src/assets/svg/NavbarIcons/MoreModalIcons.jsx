@@ -87,22 +87,6 @@ const MoreModalIcons = React.memo(({ name }) => {
   );
 });
 
-export const Cross = ({ className }) => {
-  return (
-    <svg
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      data-name="Layer 1"
-      viewBox="0 0 24 24"
-      width="9px"
-      height="9px"
-      fill="gray"
-    >
-      <path d="m13.414 12 7.293-7.293a1 1 0 1 0-1.414-1.414L12 10.586 4.707 3.293a1 1 0 1 0-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414L12 13.414l7.293 7.293a.997.997 0 0 0 1.414 0 1 1 0 0 0 0-1.414L13.414 12z" />
-    </svg>
-  );
-};
-
 export const Back = () => {
   return (
     <svg

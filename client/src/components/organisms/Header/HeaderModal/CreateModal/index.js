@@ -11,8 +11,8 @@ import CreateModalIcons from "../../../../../assets/svg/NavbarIcons/CreateModalI
 import SwitchButton from "../../../../molecules/SwitchButton";
 import { useAddpostMutation } from "../../../../../store/slices/apislice";
 import { useGetpostsQuery } from "../../../../../store/slices/apislice";
-import loader from '../../../../../assets/svgs/instagramloader.gif'
-import okimage from '../../../../../assets/svgs/instagramethankyou.gif'
+import loader from '../../../../../assets/images/instagramloader.gif'
+import okimage from '../../../../../assets/images/instagramethankyou.gif'
 import { usemodal } from "../../../../molecules";
 import PostForm from "./PostForm";
 

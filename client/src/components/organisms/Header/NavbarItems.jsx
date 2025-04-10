@@ -1,5 +1,5 @@
 import React from "react";
-import { List, RoutesIcons, ThreadsIcon, UtilityIcons24 } from "./index";
+import { List, RoutesIcons, UtilityIcons24 } from "./index";
 
 const Home = () => {
   return <List Icon={<RoutesIcons name="/" />} to="/" spanname="Home" />;
@@ -73,7 +73,13 @@ const Profile = () => {
 };
 
 const Threads = () => {
-  return <List Icon={<ThreadsIcon />} spanid="threads" spanname="Threads" />;
+  return (
+    <List
+      Icon={<UtilityIcons24 name="thread" size="24" viewBox="0 0 192 192" />}
+      spanid="threads"
+      spanname="Threads"
+    />
+  );
 };
 
 const Hamberger = ({ openmodal }) => {

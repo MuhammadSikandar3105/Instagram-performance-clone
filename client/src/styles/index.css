@@ -99,6 +99,10 @@
     border-top-color: var(--border-color);
 }
 
+.border-bottom {
+    border-bottom-color: var(--border-color);
+}
+
 .bordertopnav {
     border-color: var(--border-color);
 }

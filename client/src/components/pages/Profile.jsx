@@ -95,7 +95,9 @@ const PostCard = () => {
     <div className="posts-card w-full flex flex-col">
       <div className="cards flex items-center mb-16 flex-wrap justify-center">
         {isLoading ? (
-          <p>Loading...</p>
+          <div className="my-10 text-black">
+            <UtilityIcons24 name="loader" viewBox="0 0 100 100" />
+          </div>
         ) : tasksList?.length > 0 ? (
           tasksList?.map(({ pic, id }) => (
             <div

@@ -98,12 +98,8 @@ const Postcard = () => {
 };
 
 const MoreBtn = () => {
-  const handleClick = () => {
-    console.log("moreClicked");
-  };
-
   return (
-    <div onClick={handleClick} className="hamberger cursor-pointer">
+    <div className="hamberger cursor-pointer">
       <UtilityIcons24 name="more" size="24" />
     </div>
   );
