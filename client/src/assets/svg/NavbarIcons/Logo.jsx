@@ -1,6 +1,6 @@
 import React from "react";
 
-const Logo = React.memo(() => {
+const Logo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,6 +21,6 @@ const Logo = React.memo(() => {
       ></path>
     </svg>
   );
-});
+};
 
 export default Logo;
