@@ -9,7 +9,6 @@ import { closecreatemodal } from "../../store/slices/createmodalslice";
 const usemodal = () => {
     const { activemodal } = useSelector(state => state.modal)
     const { createmodal } = useSelector(state => state.createModal)
-    // const { prevActive } = useSelector(state => state.active)
     const dispatch = useDispatch()
     const location = useLocation()
 

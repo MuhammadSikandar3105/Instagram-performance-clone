@@ -7,5 +7,6 @@ import usemodal from "../../lib/hooks/usemodal";
 import proimg from '../../assets/svgs/IMG_4307.jpg'
 const ProDetailModal = React.lazy(() => import('./Modal/ProDetailModal'));
 import Modal from "./Modal/Modal";
+import { UtilityIcons24 } from "../organisms/Header";
 
-export { Cross, ProDetailModal, Modal, proimg, usemodal, Input, RoutesIcons, activeRoute }
+export { Cross, ProDetailModal, UtilityIcons24, Modal, proimg, usemodal, Input, RoutesIcons, activeRoute }

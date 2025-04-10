@@ -1,12 +1,24 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { MoreModalIcons } from "./index";
+import { MoreModalIcons, usemodal } from "./index";
 
-const CreatePosition = React.memo(({ children, isform }) => {
+const CreatePosition = React.memo(({ children, setDiscrad, isform }) => {
+  const { closecreate } = usemodal();
   const darkTheme = useSelector((state) => state.theme.darktheme);
+  const { pic } = useSelector((state) => state.createForm);
+  const { createmodal } = useSelector((state) => state.createModal);
+
+  const handleClick = (e) => {
+    e.stopPropagation();
+    pic && createmodal && setDiscrad(true);
+    !pic && createmodal && closecreate();
+  };
 
   return (
-    <div className="bg-[#00000076] w-full h-full fixed top-1/2 -translate-y-1/2">
+    <div
+      onClick={handleClick}
+      className="bg-[#00000076] w-full h-full fixed top-1/2 -translate-y-1/2"
+    >
       <div
         className={`${
           isform ? "max-w-[857px]" : "max-w-[557px]"

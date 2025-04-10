@@ -3,7 +3,6 @@ import {
   CreatePosition,
   DiscardModal,
   Gragphotos,
-  isdiscardmodal,
   loader,
   Modal,
   newdata,
@@ -19,7 +18,7 @@ const CreateModal = () => {
   const [isform, setIsform] = useState(false);
   const [issubmited, setIssubmited] = useState(false);
   const [issuccess, setIssuccess] = useState(false);
-  const { discardmodal } = useSelector((state) => state.createModal);
+  const [discardmodal, setDiscardModal] = useState(false);
   const { pic } = useSelector((state) => state.createForm);
   const dispatch = useDispatch();
   const [data, setData] = useState({
@@ -59,16 +58,14 @@ const CreateModal = () => {
   }, [issubmited, pic]);
 
   return (
-    <CreatePosition isform={isform}>
+    <CreatePosition setDiscrad={setDiscardModal} isform={isform}>
       <Suspense>
         {pic ? (
           <>
             <div className="flex justify-between py-3 px-5">
               <p
                 className="cursor-pointer"
-                onClick={() =>
-                  dispatch(isdiscardmodal({ modalname: "Discard" }))
-                }
+                onClick={() => setDiscardModal(true)}
               >
                 <RoutesIcons name="arrow" />
               </p>
@@ -145,7 +142,9 @@ const CreateModal = () => {
         )}
         {discardmodal && (
           <Suspense>
-            <Modal>{discardmodal && <DiscardModal />}</Modal>
+            <Modal>
+              {discardmodal && <DiscardModal setDiscard={setDiscardModal} />}
+            </Modal>
           </Suspense>
         )}
       </Suspense>

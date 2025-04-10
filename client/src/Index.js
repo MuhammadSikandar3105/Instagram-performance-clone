@@ -5,7 +5,5 @@ const Explore = React.lazy(() => import("./components/pages/Explore.jsx"));
 const Reels = React.lazy(() => import("./components/pages/Reels.jsx"));
 const Message = React.lazy(() => import("./components/pages/Message.jsx"));
 const Profile = React.lazy(() => import("./components/pages/Profile.jsx"));
-import { closediscard, isdiscardmodal } from "./store/slices/createmodalslice";
-import { newdata } from "./store/slices/createFormslice";
 
-export { closediscard, newdata, isdiscardmodal, Home, Explore, Reels, Message, Profile };
+export { Home, Explore, Reels, Message, Profile };

@@ -162,6 +162,190 @@ export const UtilityIcons24 = ({ name, size }) => {
         ></polygon>
       </>
     ),
+    loader: (
+      <>
+        <svg
+          aria-label="Loading..."
+          class="xemfg65 xa4qsjk x1ka1v4i xbv57ra"
+          role="img"
+          viewBox="0 0 100 100"
+        >
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0"
+            rx="3"
+            ry="3"
+            transform="rotate(-90 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.08333333333333333"
+            rx="3"
+            ry="3"
+            transform="rotate(-60 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.16666666666666666"
+            rx="3"
+            ry="3"
+            transform="rotate(-30 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.25"
+            rx="3"
+            ry="3"
+            transform="rotate(0 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.3333333333333333"
+            rx="3"
+            ry="3"
+            transform="rotate(30 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.4166666666666667"
+            rx="3"
+            ry="3"
+            transform="rotate(60 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.5"
+            rx="3"
+            ry="3"
+            transform="rotate(90 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.5833333333333334"
+            rx="3"
+            ry="3"
+            transform="rotate(120 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.6666666666666666"
+            rx="3"
+            ry="3"
+            transform="rotate(150 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.75"
+            rx="3"
+            ry="3"
+            transform="rotate(180 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.8333333333333334"
+            rx="3"
+            ry="3"
+            transform="rotate(210 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+          <rect
+            class="x1i210e2"
+            height="6"
+            opacity="0.9166666666666666"
+            rx="3"
+            ry="3"
+            transform="rotate(240 50 50)"
+            width="25"
+            x="72"
+            y="47"
+          ></rect>
+        </svg>
+      </>
+    ),
+    follow: (
+      <>
+        <path
+          d="M19.006 8.252a3.5 3.5 0 1 1-3.499-3.5 3.5 3.5 0 0 1 3.5 3.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-miterlimit="10"
+          stroke-width="2"
+        ></path>
+        <path
+          d="M22 19.5v-.447a4.05 4.05 0 0 0-4.05-4.049h-4.906a4.05 4.05 0 0 0-4.049 4.049v.447"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        ></path>
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-miterlimit="10"
+          stroke-width="2"
+          x1="5.001"
+          x2="5.001"
+          y1="7.998"
+          y2="14.003"
+        ></line>
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-miterlimit="10"
+          stroke-width="2"
+          x1="8.004"
+          x2="2.003"
+          y1="11"
+          y2="11"
+        ></line>
+      </>
+    ),
   };
   return (
     <svg

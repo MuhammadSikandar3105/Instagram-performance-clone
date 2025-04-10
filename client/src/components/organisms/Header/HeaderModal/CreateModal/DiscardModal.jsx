@@ -1,16 +1,16 @@
 import React from "react";
-import { closediscard, newdata } from "./index";
+import { newdata } from "./index";
 import { useDispatch } from "react-redux";
 
-const DiscardModal = () => {
+const DiscardModal = ({ setDiscard }) => {
   const dispatch = useDispatch();
 
   const handleclick = () => {
     dispatch(newdata({ pic: null }));
-    dispatch(closediscard());
+    setDiscard(false);
   };
   const cancelclick = () => {
-    dispatch(closediscard());
+    setDiscard(false);
   };
 
   return (

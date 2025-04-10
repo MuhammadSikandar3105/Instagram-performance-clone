@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
-import { proimg, RoutesIcons } from "../index";
+import React, { useEffect, useState } from "react";
+import { proimg, RoutesIcons, UtilityIcons24 } from "../index";
 import { useSelector } from "react-redux";
 
 const ProDetailModal = React.memo(({ position }) => {
+  const [isFriend, setIsFriend] = useState(false);
   const darkTheme = useSelector((state) => state.theme.darktheme);
 
   return (
@@ -48,7 +49,7 @@ const ProDetailModal = React.memo(({ position }) => {
           <p className="font-normal text-xs">Following</p>
         </div>
       </div>
-      <div className="w-full px-1 flex items-center justify-start gap-1">
+      <div className="w-full flex items-center justify-start gap-1">
         <div className="w-full flex flex-col items-center justify-center">
           <img src={proimg} alt="" />
         </div>
@@ -59,14 +60,23 @@ const ProDetailModal = React.memo(({ position }) => {
           <img src={proimg} alt="" />
         </div>
       </div>
-      <div className="w-full px-4 flex items-center justify-start gap-1">
-        <button className="max-w-[200px] cursor-pointer text-white py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex gap-2 items-center justify-center">
-          <RoutesIcons name="messages" size="18" />{" "}
-          <span className="">Message</span>
-        </button>
-        <button className="max-w-[200px] cursor-pointer py-2 bg-gray-300 text-black rounded-lg w-full flex flex-col items-center justify-center">
-          Following
-        </button>
+      <div className="w-full px-4 flex items-center justify-center gap-1">
+        {isFriend ? (
+          <>
+            <button className="max-w-[200px] cursor-pointer text-white py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex gap-2 items-center justify-center">
+              <RoutesIcons name="messages" size="18" />{" "}
+              <span className="">Message</span>
+            </button>
+            <button className="max-w-[200px] cursor-pointer py-2 bg-gray-300 text-black rounded-lg w-full flex flex-col items-center justify-center">
+              Following
+            </button>
+          </>
+        ) : (
+          <button className="cursor-pointer text-white py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex gap-2 items-center justify-center">
+            <UtilityIcons24 name="follow" size="20" />
+            <span className="">Follow</span>
+          </button>
+        )}
       </div>
     </div>
   );

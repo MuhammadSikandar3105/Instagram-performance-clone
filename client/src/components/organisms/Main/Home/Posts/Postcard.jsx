@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Suspense, useState } from "react";
 import {
   Liked,
+  Modal,
+  MoreOption,
   Proimage,
   proimg,
   Proname,
@@ -9,6 +11,12 @@ import {
 } from "./index";
 
 const Postcard = () => {
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsMoreOpen(true);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full">
       <div className="header w-full pb-3 pl-1 flex justify-between items-center">
@@ -19,7 +27,9 @@ const Postcard = () => {
             <p className="text-xs">Original audio</p>
           </div>
         </div>
-        <MoreBtn />
+        <div onClick={handleClick} className="morebtn">
+          <MoreBtn />
+        </div>
       </div>
       <div className="flex w-full items-center justify-center">
         <div className="relative max-w-[470px] w-full pb-[125%] cursor-grab! rounded-sm overflow-hidden bg-black h-auto">
@@ -76,6 +86,13 @@ const Postcard = () => {
           Post
         </div>
       </div>
+      {isMoreOpen && (
+        <Suspense>
+          <Modal>
+            <MoreOption setIsMoreOpen={setIsMoreOpen} />
+          </Modal>
+        </Suspense>
+      )}
     </div>
   );
 };
