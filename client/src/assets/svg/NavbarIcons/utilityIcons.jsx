@@ -11,8 +11,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           height="18"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
           strokeWidth="2"
           width="18"
           x="3"
@@ -21,9 +21,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          stroke-width="2"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
+          strokeWidth="2"
           x1="9.015"
           x2="9.015"
           y1="3"
@@ -32,8 +32,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
           strokeWidth="2"
           x1="14.985"
           x2="14.985"
@@ -43,8 +43,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
           strokeWidth="2"
           x1="21"
           x2="3"
@@ -54,8 +54,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
           strokeWidth="2"
           x1="21"
           x2="3"
@@ -69,8 +69,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         fill="none"
         points="20 21 12 13.44 4 21 4 3 20 3 20 21"
         stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokLinecapstrokeLinecap="round"
+        strokLinejoinstrokeLinejoin="round"
         strokeWidth="2"
       ></polygon>
     ),
@@ -80,17 +80,17 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           d="M10.201 3.797 12 1.997l1.799 1.8a1.59 1.59 0 0 0 1.124.465h5.259A1.818 1.818 0 0 1 22 6.08v14.104a1.818 1.818 0 0 1-1.818 1.818H3.818A1.818 1.818 0 0 1 2 20.184V6.08a1.818 1.818 0 0 1 1.818-1.818h5.26a1.59 1.59 0 0 0 1.123-.465Z"
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></path>
         <path
           d="M18.598 22.002V21.4a3.949 3.949 0 0 0-3.948-3.949H9.495A3.949 3.949 0 0 0 5.546 21.4v.603"
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></path>
         <circle
           cx="12.072"
@@ -98,9 +98,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           r="3.556"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></circle>
       </>
     ),
@@ -138,8 +138,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
           fill="none"
           stroke="currentColor"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></path>
       </>
     ),
@@ -148,8 +148,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinejoin="round"
+          strokeWidth="2"
           x1="22"
           x2="9.218"
           y1="3"
@@ -159,8 +159,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
           stroke="currentColor"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></polygon>
       </>
     ),
@@ -307,22 +307,22 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           stroke="currentColor"
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
         ></path>
         <path
           d="M22 19.5v-.447a4.05 4.05 0 0 0-4.05-4.049h-4.906a4.05 4.05 0 0 0-4.049 4.049v.447"
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></path>
         <line
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
+          strokeLinecap="round"
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
           x1="5.001"
           x2="5.001"
           y1="7.998"
@@ -331,9 +331,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
+          strokeLinecap="round"
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
           x1="8.004"
           x2="2.003"
           y1="11"
@@ -358,9 +358,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           r="11.25"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         ></circle>
         <path
           d="M16.671 15.469 17.203 12h-3.328V9.749a1.734 1.734 0 0 1 1.956-1.874h1.513V4.922a18.452 18.452 0 0 0-2.686-.234c-2.741 0-4.533 1.66-4.533 4.668V12H7.078v3.469h3.047v7.885a12.125 12.125 0 0 0 3.75 0V15.47Z"
@@ -377,9 +377,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           height="17.273"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           width="20"
           x="2"
           y="3.364"
@@ -388,9 +388,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           points="2 7.155 12.002 13.81 22 7.157"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></polyline>
       </>
     ),
@@ -400,9 +400,9 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           d="M.75 16.097v3.568a3.585 3.585 0 0 0 3.585 3.585h3.568m0-22.5H4.335A3.585 3.585 0 0 0 .75 4.335v3.568m22.5 0V4.335A3.585 3.585 0 0 0 19.665.75h-3.568m0 22.5h3.568a3.585 3.585 0 0 0 3.585-3.585v-3.568"
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         ></path>
         <path d="M19 17.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5ZM17.5 16a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5Zm1.5-2.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5Zm-4 4h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5Zm-1-2h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5ZM18 4h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm.5 5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V6a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5ZM9 4H6a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm.5 5a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5V6a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5ZM8 6.5H7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V7a.5.5 0 0 0-.5-.5Zm0 9H7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5Zm9-9h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V7a.5.5 0 0 0-.5-.5ZM9 13H6a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2Zm.5 5a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5Z"></path>
       </>
@@ -413,21 +413,59 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           d="m9.726 5.123 1.228-1.228a6.47 6.47 0 0 1 9.15 9.152l-1.227 1.227m-4.603 4.603-1.228 1.228a6.47 6.47 0 0 1-9.15-9.152l1.227-1.227"
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         ></path>
         <line
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           x1="8.471"
           x2="15.529"
           y1="15.529"
           y2="8.471"
         ></line>
+      </>
+    ),
+    calender: (
+      <>
+        <path d="M960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985zm0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960v799.984zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32zm0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32zm-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32zm0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32z" />
+      </>
+    ),
+    loca: (
+      <>
+        <g
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+          fill="none"
+          fillRule="evenodd"
+          sketch:type="MSPage"
+        >
+          <g
+            id="Icon-Set"
+            sketch:type="MSLayerGroup"
+            transform="translate(-104.000000, -411.000000)"
+            fill="currentColor"
+          >
+            <path
+              d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
+              id="location"
+              sketch:type="MSShapeGroup"
+            ></path>
+          </g>
+        </g>
+      </>
+    ),
+    user: (
+      <>
+        <path
+          fill="currentColor"
+          d="M9.99296258,10.5729355 C12.478244,10.5729355 14.4929626,8.55821687 14.4929626,6.0729355 C14.4929626,3.58765413 12.478244,1.5729355 9.99296258,1.5729355 C7.5076812,1.5729355 5.49296258,3.58765413 5.49296258,6.0729355 C5.49296258,8.55821687 7.5076812,10.5729355 9.99296258,10.5729355 Z M10,0 C13.3137085,0 16,2.6862915 16,6 C16,8.20431134 14.8113051,10.1309881 13.0399615,11.173984 C16.7275333,12.2833441 19.4976819,15.3924771 19.9947005,19.2523727 C20.0418583,19.6186047 19.7690435,19.9519836 19.3853517,19.9969955 C19.0016598,20.0420074 18.6523872,19.7816071 18.6052294,19.4153751 C18.0656064,15.2246108 14.4363723,12.0699838 10.034634,12.0699838 C5.6099956,12.0699838 1.93381693,15.231487 1.39476476,19.4154211 C1.34758036,19.7816499 0.998288773,20.0420271 0.614600177,19.9969899 C0.230911582,19.9519526 -0.0418789616,19.6185555 0.00530544566,19.2523267 C0.500630192,15.4077896 3.28612316,12.3043229 6.97954305,11.1838052 C5.19718955,10.1447285 4,8.21217353 4,6 C4,2.6862915 6.6862915,0 10,0 Z"
+        />
       </>
     ),
   };
@@ -458,17 +496,17 @@ export const Utilitity96 = React.memo(({ name, size }) => {
           fill="none"
           r="47"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          stroke-width="2"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
+          strokeWidth="2"
         ></circle>
         <path
           d="M66 68.685 49.006 51.657a1.42 1.42 0 0 0-2.012 0L30 68.685V27h36Z"
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          stroke-width="2"
+          strokLinecapstrokeLinecap="round"
+          strokLinejoinstrokeLinejoin="round"
+          strokeWidth="2"
         ></path>
       </>
     ),
@@ -490,14 +528,14 @@ export const Utilitity96 = React.memo(({ name, size }) => {
           rx="10.444"
           ry="10.476"
           stroke="currentColor"
-          strokeLinejoin="round"
+          strokLinejoinstrokeLinejoin="round"
           strokeWidth="2.095"
         ></ellipse>
         <path
           d="M63.994 69A8.02 8.02 0 0 0 72 60.968V39.456a8.023 8.023 0 0 0-8.01-8.035h-1.749a4.953 4.953 0 0 1-4.591-3.242C56.61 25.696 54.859 25 52.469 25h-8.983c-2.39 0-4.141.695-5.181 3.178a4.954 4.954 0 0 1-4.592 3.242H32.01a8.024 8.024 0 0 0-8.012 8.035v21.512A8.02 8.02 0 0 0 32.007 69Z"
           fill="none"
           stroke="currentColor"
-          strokeLinejoin="round"
+          strokLinejoinstrokeLinejoin="round"
           strokeWidth="2"
         ></path>
       </>

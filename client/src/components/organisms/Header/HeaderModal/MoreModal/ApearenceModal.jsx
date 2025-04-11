@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import {
-  Back,
   MoreModalIcons,
   MoreModalPosition,
   SwitchButton,
@@ -27,7 +26,9 @@ const ApearenceModal = ({ goback }) => {
                 className="cursor-pointer modalhover mt-1 p-1 rounded-[5px]"
                 onClick={goback}
               >
-                <Back />
+                <div className="rotate-[-90deg]">
+                  <MoreModalIcons name="back" size="12" />
+                </div>
               </div>
               <p className="font-[600] text-[16px]">Switch appearance</p>
             </div>

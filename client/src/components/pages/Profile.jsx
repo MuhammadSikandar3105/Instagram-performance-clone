@@ -90,16 +90,17 @@ const Profile = () => {
 };
 
 const PostCard = () => {
-  const { data: tasksList, isError, isLoading, error } = useGetpostsQuery();
+  const { data: posts, isError, isLoading, error } = useGetpostsQuery();
   return (
     <div className="posts-card w-full flex flex-col">
       <div className="cards flex items-center mb-16 flex-wrap justify-center">
         {isLoading ? (
-          <div className="my-10 text-black">
+          //animate this
+          <div className="my-10 text-black animate-spin">
             <UtilityIcons24 name="loader" viewBox="0 0 100 100" />
           </div>
-        ) : tasksList?.length > 0 ? (
-          tasksList?.map(({ pic, id }) => (
+        ) : posts?.length > 0 ? (
+          posts?.map(({ pic, id }) => (
             <div
               key={id}
               className="card ml-1 w-[294px] h-[396px] flex items-center "

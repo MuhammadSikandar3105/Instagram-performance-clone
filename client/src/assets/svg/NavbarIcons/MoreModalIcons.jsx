@@ -1,6 +1,6 @@
 import React from "react";
 
-const MoreModalIcons = React.memo(({ name }) => {
+const MoreModalIcons = React.memo(({ name, size }) => {
   const iconsPath = {
     Setting: (
       <>
@@ -68,6 +68,9 @@ const MoreModalIcons = React.memo(({ name }) => {
         ></line>
       </>
     ),
+    back: (
+      <path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path>
+    ),
   };
 
   return (
@@ -76,33 +79,16 @@ const MoreModalIcons = React.memo(({ name }) => {
       aria-label={name}
       className="x1lliihq x1n2onr6 x5n08af"
       fill="currentColor"
-      height="18"
+      height={size || "18"}
       role="img"
       viewBox="0 0 24 24"
-      width="18"
+      width={size || "18"}
     >
       <title>{name}</title>
       {iconsPath[name] || null}
     </svg>
   );
 });
-
-export const Back = () => {
-  return (
-    <svg
-      aria-label="Back"
-      className="x1lliihq x1n2onr6 x10xgr34 rotate-270 borderColor"
-      fill="currentColor"
-      height="12"
-      role="img"
-      viewBox="0 0 24 24"
-      width="12"
-    >
-      <title>Back</title>
-      <path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path>
-    </svg>
-  );
-};
 
 export const Gragphotos = () => {
   return (

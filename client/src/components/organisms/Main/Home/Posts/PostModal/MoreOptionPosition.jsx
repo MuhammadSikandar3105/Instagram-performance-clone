@@ -11,10 +11,10 @@ const MoreOptionPosition = ({ children, setIsMoreOpen }) => {
   return (
     <div
       onClick={handleClick}
-      className="bg-[#00000076] w-full h-full fixed top-1/2 -translate-y-1/2"
+      className="bg-[#000000ae] w-full h-full fixed top-1/2 -translate-y-1/2"
     >
       <div
-        className={`max-w-[400px] max-h-[425px] overflow-hidden w-full h-fit top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-[16px] searchmodalshadow modalbg text-secondary absolute 
+        className={`max-w-[400px] overflow-hidden w-full h-fit top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-[16px] searchmodalshadow modalbg text-secondary absolute 
          ${darkTheme && "darkmode"}`}
         onClick={(e) => e.stopPropagation()}
       >

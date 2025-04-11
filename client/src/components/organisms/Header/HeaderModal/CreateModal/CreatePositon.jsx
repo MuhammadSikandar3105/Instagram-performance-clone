@@ -17,7 +17,7 @@ const CreatePosition = React.memo(({ children, setDiscrad, isform }) => {
   return (
     <div
       onClick={handleClick}
-      className="bg-[#00000076] w-full h-full fixed top-1/2 -translate-y-1/2"
+      className="bg-[#000000ae] w-full h-full fixed top-1/2 -translate-y-1/2"
     >
       <div
         className={`${

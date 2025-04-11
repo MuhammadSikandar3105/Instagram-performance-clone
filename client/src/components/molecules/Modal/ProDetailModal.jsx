@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { proimg, RoutesIcons, UtilityIcons24 } from "../index";
 import { useSelector } from "react-redux";
 
