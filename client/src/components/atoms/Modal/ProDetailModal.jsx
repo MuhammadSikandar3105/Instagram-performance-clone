@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { proimg, RoutesIcons, UtilityIcons24 } from "../index";
+import { proimg, RoutesIcons, UtilityIcons24 } from "../../molecules/index";
 import { useSelector } from "react-redux";
 
 const ProDetailModal = React.memo(({ position }) => {

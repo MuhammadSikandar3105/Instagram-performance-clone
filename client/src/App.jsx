@@ -2,8 +2,7 @@ import React, { Suspense } from "react";
 const Navbar = React.lazy(() => import("./components/organisms/Header/Navbar"));
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Usescreensize from "../src/lib/hooks/Usescreensize";
-import usemodal from "./lib/hooks/usemodal";
+import { Loader, usemodal, Usescreensize } from "./Index";
 
 function App() {
   const darktheme = useSelector((state) => state.theme.darktheme);
@@ -24,7 +23,7 @@ function App() {
       } text-secondary min-h-screen bg-primary`}
     >
       {/* //add simmer effect on this */}
-      <Suspense fallback={<div className="text-2xl">Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Navbar />
       </Suspense>
       <Outlet />

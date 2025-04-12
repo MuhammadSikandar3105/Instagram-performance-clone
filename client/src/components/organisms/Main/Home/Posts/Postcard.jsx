@@ -1,12 +1,9 @@
 import React, { Suspense, useState } from "react";
 import {
-  Liked,
   Modal,
   MoreOption,
-  Proimage,
   proimg,
-  Proname,
-  thankyou,
+  ProInfoCard,
   UtilityIcons24,
 } from "./index";
 
@@ -19,17 +16,16 @@ const Postcard = () => {
 
   return (
     <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full">
-      <div className="header w-full pb-3 pl-1 flex justify-between items-center">
-        <div className="profile flex items-center justify-center">
-          <Proimage image={proimg} />
-          <div className="proname flex flex-col items-start justify-start">
-            <Proname name="Mr.Malik2189" />
-            <p className="text-xs">Original audio</p>
+      <div className="w-full pb-3 pl-1">
+        <ProInfoCard
+          userName="Mr.Malik2189"
+          name="Original audio"
+          image={proimg}
+        >
+          <div onClick={handleClick} className="morebtn">
+            <MoreBtn />
           </div>
-        </div>
-        <div onClick={handleClick} className="morebtn">
-          <MoreBtn />
-        </div>
+        </ProInfoCard>
       </div>
       <div className="flex w-full items-center justify-center">
         <div className="relative max-w-[470px] w-full pb-[125%] cursor-grab! rounded-sm overflow-hidden bg-black h-auto">

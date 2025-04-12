@@ -1,5 +1,5 @@
 import React from "react";
-import { FriendsSugg, MainContent, Posts } from "./index";
+import { Footer, FriendsSugg, MainContent, Posts } from "./index";
 
 const Home = () => {
   return (
@@ -7,6 +7,9 @@ const Home = () => {
       <div className="flex justify-center items-start">
         <Posts />
         <FriendsSugg />
+      </div>
+      <div className="mt-10">
+        <Footer />
       </div>
     </MainContent>
   );

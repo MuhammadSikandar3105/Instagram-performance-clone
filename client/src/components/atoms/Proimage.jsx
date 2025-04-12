@@ -2,20 +2,27 @@ import React, { Suspense, useRef } from "react";
 import { Modal, ProDetailModal } from "./index";
 import { useProModal } from "../../lib/hooks/useProModal";
 
-const Proname = ({ name }) => {
-  const nameRef = useRef(null);
+const Proimage = ({ image, size, modal = true }) => {
+  const imageRef = useRef(null);
   const [ismodal, position, handleMouseEnter, handleMouseLeave] =
-    useProModal(nameRef);
+    useProModal(imageRef);
 
   return (
     <>
       <div
-        ref={nameRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className="text-sm text-secondary cursor-pointer font-semibold"
+        {...(modal && {
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
+          ref: imageRef,
+        })}
+        style={{ width: size || 32, height: size || 32 }}
+        className={`relative mr-2 rounded-full p-1 overflow-hidden`}
       >
-        {name}
+        <img
+          src={image}
+          className="absolute top-1/2 left-1/2 -translate-1/2"
+          alt=""
+        />
       </div>
       {ismodal && (
         <Modal>
@@ -30,4 +37,4 @@ const Proname = ({ name }) => {
   );
 };
 
-export default Proname;
+export default Proimage;
