@@ -34,6 +34,7 @@ const Morebtn = ({ setmodal, name, border = true, color = false }) => {
     value === "Share" && setmodal((prev) => ({ ...prev, isShare: true }));
     value === "Report" && setmodal((prev) => ({ ...prev, isreport: true }));
     value === "About" && setmodal((prev) => ({ ...prev, isAcc: true }));
+    value === "Go" && setmodal((prev) => ({ ...prev, ispost: true }));
   };
   return (
     <div

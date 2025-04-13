@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import {
   AcountModal,
   MoreOpModal,
@@ -7,12 +7,19 @@ import {
   ShareModal,
 } from "./index";
 import {} from "./index";
+import { useNavigate } from "react-router-dom";
 
 const MoreOption = ({ setIsMoreOpen }) => {
   const [isModal, setIsModal] = useState({
     isShare: false,
     isreport: false,
     isAcc: false,
+    ispost: false,
+  });
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    isModal.ispost && navigate("/reels/12");
   });
 
   return (

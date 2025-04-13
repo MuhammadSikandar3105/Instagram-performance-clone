@@ -1,19 +1,7 @@
-import React, { Suspense, useState } from "react";
-import {
-  Modal,
-  MoreOption,
-  proimg,
-  ProInfoCard,
-  UtilityIcons24,
-} from "./index";
+import React from "react";
+import { MoreBtn, PostActions, proimg, ProInfoCard } from "./index";
 
 const Postcard = () => {
-  const [isMoreOpen, setIsMoreOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsMoreOpen(true);
-  };
-
   return (
     <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full">
       <div className="w-full pb-3 pl-1">
@@ -22,9 +10,7 @@ const Postcard = () => {
           name="Original audio"
           image={proimg}
         >
-          <div onClick={handleClick} className="morebtn">
-            <MoreBtn />
-          </div>
+          <MoreBtn />
         </ProInfoCard>
       </div>
       <div className="flex w-full items-center justify-center">
@@ -38,23 +24,7 @@ const Postcard = () => {
           </div>
         </div>
       </div>
-      <div className="w-full my-1 flex justify-between items-center">
-        <div className="like flex">
-          <div className="p-2 cursor-pointer">
-            <UtilityIcons24 name="like" size="24" />
-            {/* <Liked  text-[#ff3040]/> */}
-          </div>
-          <div className="p-2 cursor-pointer">
-            <UtilityIcons24 name="comment" size="24" />
-          </div>
-          <div className="p-2 cursor-pointer">
-            <UtilityIcons24 name="share" size="24" />
-          </div>
-        </div>
-        <div className="p-2 cursor-pointer">
-          <UtilityIcons24 name="SAVED" size="24" />
-        </div>
-      </div>
+      <PostActions />
       <div className="likes w-full flex items-start">
         <p className="text-sm font-bold ">0 Like</p>
       </div>
@@ -82,21 +52,6 @@ const Postcard = () => {
           Post
         </div>
       </div>
-      {isMoreOpen && (
-        <Suspense>
-          <Modal>
-            <MoreOption setIsMoreOpen={setIsMoreOpen} />
-          </Modal>
-        </Suspense>
-      )}
-    </div>
-  );
-};
-
-const MoreBtn = () => {
-  return (
-    <div className="hamberger cursor-pointer">
-      <UtilityIcons24 name="more" size="24" />
     </div>
   );
 };

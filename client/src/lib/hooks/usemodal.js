@@ -1,9 +1,9 @@
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal, goPrevious, isModalOpen } from "../../store/slices/modalslice";
-import { activeRoute } from "../../components/molecules";
 import { useLocation } from "react-router-dom";
 import { closecreatemodal } from "../../store/slices/createmodalslice";
+import { activeRoute } from "../../store/slices/activerouteslice";
 
 
 const usemodal = () => {
