@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/reels/:id",
+        path: "/reel/:id",
         element: (
           <Suspense>
             <Postview />

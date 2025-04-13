@@ -19,7 +19,7 @@ const MoreOption = ({ setIsMoreOpen }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    isModal.ispost && navigate("/reels/12");
+    isModal.ispost && navigate("/reel/12");
   });
 
   return (
