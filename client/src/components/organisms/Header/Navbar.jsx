@@ -90,7 +90,13 @@ const Navbar = () => {
               )}
               {createmodal && (
                 <Suspense>
-                  <Modal>{createmodal === "Create" && <CreateModal />}</Modal>
+                  <Modal>
+                    {createmodal === "Create" && (
+                      <Suspense>
+                        <CreateModal />
+                      </Suspense>
+                    )}
+                  </Modal>
                 </Suspense>
               )}
             </ul>

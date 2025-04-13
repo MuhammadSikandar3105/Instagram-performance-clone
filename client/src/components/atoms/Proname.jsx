@@ -15,7 +15,7 @@ const Proname = ({ name, modal = true }) => {
           onMouseLeave: handleMouseLeave,
           ref: nameRef,
         })}
-        className="text-sm text-secondary cursor-pointer font-semibold"
+        className="text-sm w-fit text-secondary cursor-pointer font-semibold"
       >
         {name}
       </div>

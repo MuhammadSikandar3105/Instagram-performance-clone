@@ -6,6 +6,9 @@ const Proimage = ({ image, size, modal = true }) => {
   const imageRef = useRef(null);
   const [ismodal, position, handleMouseEnter, handleMouseLeave] =
     useProModal(imageRef);
+  const imgRef = useRef(null);
+
+  const imagefetch = imgRef.current?.attributes?.src.nodeValue;
 
   return (
     <>
@@ -19,6 +22,7 @@ const Proimage = ({ image, size, modal = true }) => {
         className={`relative mr-2 rounded-full p-1 overflow-hidden`}
       >
         <img
+          ref={imgRef}
           src={image}
           className="absolute top-1/2 left-1/2 -translate-1/2"
           alt=""
@@ -28,7 +32,7 @@ const Proimage = ({ image, size, modal = true }) => {
         <Modal>
           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Suspense>
-              <ProDetailModal position={position} />
+              <ProDetailModal position={position} image={imagefetch} />
             </Suspense>
           </div>
         </Modal>

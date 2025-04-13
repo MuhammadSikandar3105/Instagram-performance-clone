@@ -7,7 +7,7 @@ const Postcard = () => {
       <div className="w-full pb-3 pl-1">
         <ProInfoCard
           userName="Mr.Malik2189"
-          name="Original audio"
+          detail="Original audio"
           image={proimg}
         >
           <MoreBtn />

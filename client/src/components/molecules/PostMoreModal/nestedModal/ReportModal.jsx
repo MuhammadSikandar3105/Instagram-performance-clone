@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { HeaderModal, MoreModalIcons } from "../index";
 
 const shareArr = [
@@ -16,7 +17,9 @@ const ReportModal = ({ setMore }) => {
   };
   return (
     <div className="flex flex-col justify-center py-1 w-full h-fit items-center">
-      <HeaderModal name="Report" handleClick={handleClick} />
+      <Suspense>
+        <HeaderModal name="Report" handleClick={handleClick} />
+      </Suspense>
       <div
         className={`text-primary py-3 pt-5 px-4  font-semibold text-primary  cursor-pointer w-full text-start border-bottom border-b-[1px]`}
       >

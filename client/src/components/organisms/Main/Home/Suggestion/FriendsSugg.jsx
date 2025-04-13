@@ -1,13 +1,13 @@
 import React from "react";
 import {} from "../index";
-import { proimg, ProInfoCard } from "../Posts";
+import { proimg, proimg1, proimg2, proimg3, ProInfoCard } from "../Posts";
 
 const SuggFriendsArr = [
-  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg },
-  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg },
-  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg },
-  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg },
-  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg },
+  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg1 },
+  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg2 },
+  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg3 },
+  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg1 },
+  { name: "Mr.Malik", userName: "mr.malik2189", image: proimg2 },
 ];
 const FriendsSugg = () => {
   return (

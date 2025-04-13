@@ -15,7 +15,9 @@ const ProInfoCard = ({
   return (
     <div className="flex w-full items-center justify-between">
       <div
-        className={`flex gap-2 ${!captions && "items-center"}  justify-center`}
+        className={`flex relative gap-2 ${
+          !captions && "items-center"
+        }  justify-center`}
       >
         <Proimage image={image} size={size} modal={modal} />
         <div className="flex flex-col">
@@ -23,19 +25,19 @@ const ProInfoCard = ({
           <div
             className={`text-sm ${
               detail || captions ? "text-primary" : "btn-color"
-            } cursor-pointer font-normal`}
+            } font-normal`}
           >
             {name ? (
               name
             ) : captions ? (
               <>
-                <span>{caption}</span>
-                {caption.map((caption, i) => {
+                <span>{caption[0]}</span>
+                {caption.map((tags, i) => {
                   if (i !== 0) {
                     return (
-                      <span className="text-[#386d98]">
+                      <span className="text-[#386d98] cursor-pointer">
                         {"#"}
-                        {caption}
+                        {tags}
                       </span>
                     );
                   }

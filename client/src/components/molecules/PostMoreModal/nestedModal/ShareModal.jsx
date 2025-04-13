@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { HeaderModal, RoutesIcons, UtilityIcons24 } from "../index";
 
 const ShareModal = ({ setMore }) => {
@@ -19,7 +20,9 @@ const ShareModal = ({ setMore }) => {
   ];
   return (
     <div className="flex flex-col justify-center py-1 w-full h-fit items-center">
-      <HeaderModal name="Share to..." handleClick={handleClick} />
+      <Suspense>
+        <HeaderModal name="Share to..." handleClick={handleClick} />
+      </Suspense>
       <div className="py-2 w-full h-[360px] overflow-y-auto">
         {shareArr.map(({ name, icon }, i) => {
           return <Sharebtn key={i} setMore={setMore} name={name} icon={icon} />;

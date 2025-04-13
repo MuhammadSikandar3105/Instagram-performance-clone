@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { HeaderModal, MoreModalIcons, proimg, UtilityIcons24 } from "../index";
 
 const AcountModal = ({ setMore }) => {
   return (
     <div className="flex flex-col justify-center w-full pt-1 h-fit items-center">
-      <HeaderModal name="About this account" icon={false} />
+      <Suspense>
+        <HeaderModal name="About this account" icon={false} />
+      </Suspense>
       <div className="w-full h-fit">
         <div className="flex flex-col items-center py-2 justify-center w-full">
           <div

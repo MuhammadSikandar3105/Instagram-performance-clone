@@ -26,13 +26,21 @@ const MoreOption = ({ setIsMoreOpen }) => {
     <Suspense>
       <MoreOpPosition setIsMoreOpen={setIsMoreOpen}>
         {isModal.isShare ? (
-          <ShareModal setshare={setIsModal} setMore={setIsMoreOpen} />
+          <Suspense>
+            <ShareModal setshare={setIsModal} setMore={setIsMoreOpen} />
+          </Suspense>
         ) : isModal.isreport ? (
-          <ReportModal setMore={setIsMoreOpen} />
+          <Suspense>
+            <ReportModal setMore={setIsMoreOpen} />
+          </Suspense>
         ) : isModal.isAcc ? (
-          <AcountModal setMore={setIsMoreOpen} />
+          <Suspense>
+            <AcountModal setMore={setIsMoreOpen} />
+          </Suspense>
         ) : (
-          <MoreOpModal setModal={setIsModal} />
+          <Suspense>
+            <MoreOpModal setModal={setIsModal} />
+          </Suspense>
         )}
       </MoreOpPosition>
     </Suspense>

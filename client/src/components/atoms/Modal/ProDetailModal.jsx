@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { proimg, RoutesIcons, UtilityIcons24 } from "../../molecules/index";
 import { useSelector } from "react-redux";
 
-const ProDetailModal = React.memo(({ position }) => {
+const ProDetailModal = React.memo(({ position, image }) => {
   const [isFriend, setIsFriend] = useState(false);
   const darkTheme = useSelector((state) => state.theme.darktheme);
 
   return (
     <div
       className={`${
-        darkTheme && "darkmode"
-      } rounded-lg w-[366px] dark flex flex-col gap-3 py-4 h-auto fixed text-sm font-semibold`}
+        darkTheme && "darkmode shadow-[#3b3b3b]"
+      } rounded-lg w-[366px] shadow-md dark flex flex-col gap-3 py-4 h-auto fixed text-sm font-semibold`}
       style={
         position.top < "418"
           ? { top: position.top, left: position.left }
@@ -25,7 +25,7 @@ const ProDetailModal = React.memo(({ position }) => {
           className={`max-w-full relative mr-2 rounded-full p-1 w-14 h-14 overflow-hidden`}
         >
           <img
-            src={proimg}
+            src={image || proimg}
             className="absolute top-1/2 left-1/2 -translate-1/2"
             alt=""
           />
@@ -51,13 +51,13 @@ const ProDetailModal = React.memo(({ position }) => {
       </div>
       <div className="w-full flex items-center justify-start gap-1">
         <div className="w-full flex flex-col items-center justify-center">
-          <img src={proimg} alt="" />
+          <img src={image || proimg} alt="" />
         </div>
         <div className="w-full flex flex-col items-center justify-center">
-          <img src={proimg} alt="" />
+          <img src={image || proimg} alt="" />
         </div>
         <div className="w-full flex flex-col items-center justify-center">
-          <img src={proimg} alt="" />
+          <img src={image || proimg} alt="" />
         </div>
       </div>
       <div className="w-full px-4 flex items-center justify-center gap-1">
@@ -72,7 +72,10 @@ const ProDetailModal = React.memo(({ position }) => {
             </button>
           </>
         ) : (
-          <button className="cursor-pointer text-white py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex gap-2 items-center justify-center">
+          <button
+            onClick={() => setIsFriend(true)}
+            className="cursor-pointer text-white py-2 bg-[#0095F6] rounded-lg w-full mr-1 flex gap-2 items-center justify-center"
+          >
             <UtilityIcons24 name="follow" size="20" />
             <span className="">Follow</span>
           </button>
