@@ -11,6 +11,8 @@
     "json-server": "json-server db.json --watch"
   },
   "dependencies": {
+    "@emoji-mart/data": "^1.2.1",
+    "@emoji-mart/react": "^1.1.1",
     "@reduxjs/toolkit": "^2.5.0",
     "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",

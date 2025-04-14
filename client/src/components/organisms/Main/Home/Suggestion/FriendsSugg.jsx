@@ -32,9 +32,9 @@ const FriendsSugg = () => {
         </div>
       </div>
       <div className="sugg w-full flex flex-col items-center justify-center my-2">
-        {SuggFriendsArr.map(({ name, userName, image }) => {
+        {SuggFriendsArr.map(({ name, userName, image }, i) => {
           return (
-            <div key={name} className="my-2 w-full">
+            <div key={i} className="my-2 w-full">
               <ProInfoCard
                 userName={userName}
                 name={name}

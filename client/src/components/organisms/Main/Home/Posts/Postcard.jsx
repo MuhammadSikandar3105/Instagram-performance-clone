@@ -8,14 +8,12 @@ import {
   useGetusersQuery,
 } from "./index";
 
-const Postcard = ({ post, index }) => {
+const Postcard = ({ post }) => {
   const { data } = useGetusersQuery();
   const user = data?.find((user) => user.id === post.userid);
   return (
     <div
-      className={`flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0  py-3 w-full ${
-        index !== 0 && "border-t border-b border"
-      }`}
+      className={`flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t-0 py-0 pb-3 w-full border-b border`}
     >
       <div className="w-full pb-3 pl-1">
         <ProInfoCard

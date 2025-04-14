@@ -164,3 +164,16 @@ a:hover {
 ul li {
     list-style: none;
 }
+
+.emoji-mart-search {
+    display: none !important;
+}
+
+.emoji-picker-container {
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.emoji-picker-container::-webkit-scrollbar {
+    width: 0px;
+}
