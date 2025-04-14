@@ -22,13 +22,14 @@ const CreateModal = () => {
   const { pic } = useSelector((state) => state.createForm);
   const dispatch = useDispatch();
   const [data, setData] = useState({
-    id: crypto.randomUUID(),
+    postid: crypto.randomUUID(),
     pic: pic,
     caption: "",
     location: "",
     colaborators: "",
-    islikehide: false,
-    iscommenthide: false,
+    likehide: false,
+    commenthide: false,
+    userid: "1",
   });
   const onChange = (e) => {
     let file = e.target.files[0];

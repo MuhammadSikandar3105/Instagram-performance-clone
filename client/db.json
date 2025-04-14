@@ -1,67 +1,163 @@
 {
   "posts": [
     {
-      "id": "6d9eb1d7-8c2f-4d24-bc30-6a72e6bee986",
+      "id": "1",
       "pic": "blob:http://localhost:5173/8595406d-b090-4197-b3b6-25fc250f0c5a",
       "caption": "at the al-kabab hotel as a treet of friend for his first car.",
       "location": "rahim yar khan",
       "colaborators": "nasir khan",
-      "islikehide": true,
-      "iscommenthide": false
+      "likehide": true,
+      "likes": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "commenthide": false,
+      "comments": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "userid": "1"
     },
     {
-      "id": "73c8c8e7-d9fe-402c-8a37-d3db266c1eb2",
+      "id": "2",
       "pic": "blob:http://localhost:5173/ec62ecfa-3d87-49fb-824c-bebe2fea7257",
       "caption": "fdf",
       "location": "dfasd",
       "colaborators": "dfasdfa",
-      "islikehide": true,
-      "iscommenthide": true
+      "likehide": true,
+      "likes": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "commenthide": false,
+      "comments": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "userid": "1"
     },
     {
-      "id": "9cf8e938-8d82-4f85-bb9d-cf3112f6b7d0",
-      "pic": "blob:http://localhost:5173/a39f1a2b-5c60-4ead-9b79-1e8d72593c2d",
-      "caption": "fadfa",
-      "location": "fdasdfa",
-      "colaborators": "fasdfa",
-      "islikehide": false,
-      "iscommenthide": true
-    },
-    {
-      "id": "c08aeb67-b006-4d4b-bee7-9488d7398009",
-      "pic": "blob:http://localhost:5173/2c4ad045-beb9-4149-b7d5-3acaff358e04",
+      "id": "3",
+      "pic": "blob:http://localhost:5173/2466e547-bc86-42e5-ba5c-e3c569112343",
       "caption": "",
       "location": "",
       "colaborators": "",
-      "islikehide": false,
-      "iscommenthide": false
+      "likehide": false,
+      "likes": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "commenthide": false,
+      "comments": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "userid": "2"
     },
     {
-      "id": "eef0b4d0-4cb5-47a0-90e2-fce4e6b94bd2",
-      "pic": "blob:http://localhost:5173/731341a9-48ee-42e2-adff-5b4298cd07fd",
-      "caption": "",
-      "location": "",
-      "colaborators": "",
-      "islikehide": false,
-      "iscommenthide": false
+      "postid": "4",
+      "pic": "blob:http://localhost:5173/a5a763bc-74e1-4fe2-8fe1-1be4f9f33b2f",
+      "caption": "hello world",
+      "location": "rahim yar khan",
+      "colaborators": "nasir khan",
+      "likehide": true,
+      "likes": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "commenthide": true,
+      "comments": [
+        {
+          "userid": "1"
+        },
+        {
+          "userid": "2"
+        }
+      ],
+      "userid": "1"
     },
     {
-      "id": "4e06d967-3225-455e-a30e-565b334b1756",
-      "pic": "blob:http://localhost:5173/97c58fed-1601-4bf4-a3fe-5c9d29cd436d",
-      "caption": "",
-      "location": "",
-      "colaborators": "",
-      "islikehide": false,
-      "iscommenthide": false
+      "postid": "5",
+      "pic": "blob:http://localhost:5173/eb5f5091-461b-40b7-9ea1-49f8c188345a",
+      "caption": "helli world",
+      "location": "rahim yar khan",
+      "colaborators": "nasir khan",
+      "likehide": false,
+      "commenthide": true,
+      "userid": "1",
+      "likes": [],
+      "comments": []
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "sarib_hassan89",
+      "posts": [
+        {
+          "postid": "1"
+        },
+        {
+          "postid": "2"
+        }
+      ],
+      "followers": [
+        {
+          "userid": "2"
+        }
+      ],
+      "following": [
+        {
+          "userid": "2"
+        }
+      ]
     },
     {
-      "id": "1f6b3e20-0bee-43c5-b86f-5064acd1f382",
-      "pic": "blob:http://localhost:5173/2ae9b72b-d674-479f-a118-825c0cf4c90c",
-      "caption": "",
-      "location": "",
-      "colaborators": "",
-      "islikehide": false,
-      "iscommenthide": false
+      "id": "2",
+      "name": "mr.malik2189",
+      "posts": [
+        {
+          "postid": "3"
+        }
+      ],
+      "followers": [
+        {
+          "userid": "1"
+        }
+      ],
+      "following": [
+        {
+          "userid": "1"
+        }
+      ]
     }
   ]
 }

@@ -1,12 +1,25 @@
 import React from "react";
-import { MoreBtn, PostActions, proimg, ProInfoCard } from "./index";
+import {
+  CommentInput,
+  MoreBtn,
+  PostActions,
+  proimg,
+  ProInfoCard,
+  useGetusersQuery,
+} from "./index";
 
-const Postcard = () => {
+const Postcard = ({ post, index }) => {
+  const { data } = useGetusersQuery();
+  const user = data?.find((user) => user.id === post.userid);
   return (
-    <div className="flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0 border-t border-b py-3 border w-full">
+    <div
+      className={`flex flex-col items-center justify-center max-w-[470px] border-l-0 border-r-0  py-3 w-full ${
+        index !== 0 && "border-t border-b border"
+      }`}
+    >
       <div className="w-full pb-3 pl-1">
         <ProInfoCard
-          userName="Mr.Malik2189"
+          userName={user?.name}
           detail="Original audio"
           image={proimg}
         >
@@ -26,32 +39,34 @@ const Postcard = () => {
       </div>
       <PostActions />
       <div className="likes w-full flex items-start">
-        <p className="text-sm font-bold ">0 Like</p>
+        {!post?.likehide && (
+          <p className="text-sm font-bold ">
+            {post?.likes?.length} {post?.likes?.length > 1 ? "Likes" : "Like"}
+          </p>
+        )}
       </div>
-      <div className="caption w-full mt-2">
-        <p className="text-sm text-secondary font-semibold">
-          malik786{" "}
-          <span className="font-normal">
-            Leaked Video of Dhoom 4 Shooting 😱...{" "}
-            <span className="text-[#737373] cursor-pointer ">more</span>
-          </span>
-        </p>
-      </div>
-      <div className="viewcomments w-full mt-2">
-        <p className="text-[#737373] text-sm cursor-pointer">
-          View all 143 comments
-        </p>
-      </div>
-      <div className="comment relative w-full h-fit">
-        <input
-          type="text"
-          placeholder="Add a comment..."
-          className="py-1 focus:outline-none"
-        />
-        <div className="text-[#0095F6] font-semibold absolute right-6 top-1/2 -translate-y-1/2 cursor-pointer ">
-          Post
+      {!post?.caption.length === 0 && (
+        <div className="caption w-full mt-2">
+          <p className="text-sm text-secondary font-semibold">
+            {user?.name}{" "}
+            <span className="font-normal">
+              {post?.caption}
+              {"... "}
+              <span className="text-[#737373] cursor-pointer ">more</span>
+            </span>
+          </p>
         </div>
-      </div>
+      )}
+      {!post?.commenthide && (
+        <>
+          <div className="viewcomments w-full mt-2">
+            <p className="text-[#737373] text-sm cursor-pointer">
+              View all {post?.comments?.length} comments
+            </p>
+          </div>
+          <CommentInput />
+        </>
+      )}
     </div>
   );
 };

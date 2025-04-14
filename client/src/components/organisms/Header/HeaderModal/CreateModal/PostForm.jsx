@@ -73,14 +73,14 @@ const PostForm = ({ pic, isform, data, setData }) => {
                 <Setting
                   heading="Hide like and view counts on this post"
                   disc="Only you will see the total number of likes and views on this post. You can change this later by going to the ··· menu at the top of the post.To hide like counts on other people's posts, go to your account settings."
-                  name="islikehide"
+                  name="likehide"
                   data={data}
                   setData={setData}
                 />
                 <Setting
                   heading="Turn off commenting"
                   disc="You can change this later by going to the ··· menu at the top of your post."
-                  name="iscommenthide"
+                  name="commenthide"
                   data={data}
                   setData={setData}
                 />

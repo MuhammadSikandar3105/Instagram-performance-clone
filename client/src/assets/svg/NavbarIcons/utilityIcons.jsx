@@ -11,8 +11,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           fill="none"
           height="18"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
           width="18"
           x="3"
@@ -21,8 +21,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
           x1="9.015"
           x2="9.015"
@@ -32,8 +32,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
           x1="14.985"
           x2="14.985"
@@ -43,8 +43,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
           x1="21"
           x2="3"
@@ -54,8 +54,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         <line
           fill="none"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
           x1="21"
           x2="3"
@@ -69,8 +69,8 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
         fill="none"
         points="20 21 12 13.44 4 21 4 3 20 3 20 21"
         stroke="currentColor"
-        strokLinecapstrokeLinecap="round"
-        strokLinejoinstrokeLinejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         strokeWidth="2"
       ></polygon>
     ),
@@ -255,7 +255,7 @@ export const UtilityIcons24 = React.memo(({ name, size, viewBox }) => {
           y="47"
         ></rect>
         <rect
-          class="x1i210e2"
+          className="x1i210e2"
           height="6"
           opacity="0.6666666666666666"
           rx="3"
@@ -499,16 +499,16 @@ export const Utilitity96 = React.memo(({ name, size }) => {
           fill="none"
           r="47"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
         ></circle>
         <path
           d="M66 68.685 49.006 51.657a1.42 1.42 0 0 0-2.012 0L30 68.685V27h36Z"
           fill="none"
           stroke="currentColor"
-          strokLinecapstrokeLinecap="round"
-          strokLinejoinstrokeLinejoin="round"
+          strokLinecap="round"
+          strokeLinejoin="round"
           strokeWidth="2"
         ></path>
       </>
@@ -531,14 +531,14 @@ export const Utilitity96 = React.memo(({ name, size }) => {
           rx="10.444"
           ry="10.476"
           stroke="currentColor"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinejoin="round"
           strokeWidth="2.095"
         ></ellipse>
         <path
           d="M63.994 69A8.02 8.02 0 0 0 72 60.968V39.456a8.023 8.023 0 0 0-8.01-8.035h-1.749a4.953 4.953 0 0 1-4.591-3.242C56.61 25.696 54.859 25 52.469 25h-8.983c-2.39 0-4.141.695-5.181 3.178a4.954 4.954 0 0 1-4.592 3.242H32.01a8.024 8.024 0 0 0-8.012 8.035v21.512A8.02 8.02 0 0 0 32.007 69Z"
           fill="none"
           stroke="currentColor"
-          strokLinejoinstrokeLinejoin="round"
+          strokeLinejoin="round"
           strokeWidth="2"
         ></path>
       </>
@@ -583,7 +583,7 @@ export const Utilitity96 = React.memo(({ name, size }) => {
   return (
     <svg
       aria-label="Save"
-      class="x1lliihq x1n2onr6 x5n08af"
+      className="x1lliihq x1n2onr6 x5n08af"
       fill="currentColor"
       height={size}
       role="img"

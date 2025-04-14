@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
-    tagTypes: ['Posts'],
+    tagTypes: ['Posts', 'Users'],
     endpoints: (builder) => ({
         getposts: builder.query({
             query: () => '/posts',
@@ -12,7 +12,7 @@ export const api = createApi({
             query: (post) => ({
                 url: '/posts',
                 method: 'POST',
-                body: post
+                body: { ...post, likes: [], comments: [] }
             }),
             invalidatesTags: ['Posts']
         }),
@@ -22,7 +22,11 @@ export const api = createApi({
                 method: 'DELETE'
             })
         }),
+        getusers: builder.query({
+            query: () => '/users',
+            providesTags: ['Users']
+        }),
     })
 })
 
-export const { useGetpostsQuery, useAddpostMutation, useDeletepostMutation } = api
+export const { useGetpostsQuery, useAddpostMutation, useDeletepostMutation, useGetusersQuery } = api

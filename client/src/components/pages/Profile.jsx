@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import {
   Footer,
   MainContent,
@@ -6,12 +6,17 @@ import {
   RoutesIcons,
   Saved,
   Taged,
+  usefilter,
+  useGetpostsQuery,
+  useGetusersQuery,
   Utilitity96,
   UtilityIcons24,
 } from "./index";
-import { useGetpostsQuery } from "../../store/slices/apislice";
 
 const Profile = () => {
+  const { data: posts } = useGetpostsQuery();
+  const { data } = useGetusersQuery();
+  const user = data?.find((user) => user.id === "2");
   const [route, setRoute] = useState("POSTS");
   return (
     <MainContent>
@@ -27,7 +32,7 @@ const Profile = () => {
             </div>
             <div className="flex-1 gap-5 flex flex-col">
               <div className="flex items-center gap-4">
-                <h2 className="text-xl font-normal">mr.malik2186</h2>
+                <h2 className="text-xl font-normal">{user?.name}</h2>
                 <button className="h-8 px-4 py-1 text-sm font-semibold bg-border rounded-md">
                   Edit profile
                 </button>
@@ -40,21 +45,28 @@ const Profile = () => {
               </div>
               <div className="mt-2 flex gap-6 graytext">
                 <span>
-                  <span className="text-secondary font-semibold">0</span> posts
+                  <span className="text-secondary font-semibold">
+                    {posts?.length}
+                  </span>{" "}
+                  {posts?.length > 1 ? "posts" : "post"}
                 </span>
                 <span>
-                  <span className="text-secondary font-semibold">4</span>{" "}
-                  followers
+                  <span className="text-secondary font-semibold">
+                    {user?.followers?.length}
+                  </span>{" "}
+                  {user?.followers.length > 1 ? "followers" : "follower"}
                 </span>
                 <span>
-                  <span className="text-secondary font-semibold">10</span>{" "}
+                  <span className="text-secondary font-semibold">
+                    {user?.following?.length}
+                  </span>{" "}
                   following
                 </span>
               </div>
               <div className="mt-2">
-                <p className="text-sm font-semibold mb-[6px]">Mr. MAliK</p>
+                <p className="text-sm font-semibold mb-[6px]">{user?.name}</p>
                 <p className="bg-border text-xs w-fit p-1 rounded-2xl">
-                  @mr.malik2186
+                  @{user?.name}
                 </p>
               </div>
             </div>
@@ -97,12 +109,16 @@ const Profile = () => {
 };
 
 const PostCard = () => {
-  const { data: posts, isError, isLoading, error } = useGetpostsQuery();
+  const { data, isError, isLoading, error } = useGetpostsQuery();
+  const [posts, setPosts] = usefilter(data);
+  useEffect(() => {
+    let filters = [(item) => item.userid === "1"];
+    !isLoading && setPosts(filters);
+  }, [data]);
   return (
     <div className="posts-card w-full flex flex-col">
       <div className="cards flex items-center mb-16 flex-wrap justify-center">
         {isLoading ? (
-          //animate this
           <div className="my-10 text-black animate-spin">
             <UtilityIcons24 name="loader" viewBox="0 0 100 100" />
           </div>

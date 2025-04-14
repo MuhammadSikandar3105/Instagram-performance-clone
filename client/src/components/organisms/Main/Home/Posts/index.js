@@ -12,5 +12,7 @@ import PostActions from "../../../../molecules/PostActions";
 import MoreBtn from "../../../../molecules/MoreBtn";
 import MainContent from "../../../../templates/MainContent";
 import Commentcard from "../../../../molecules/Commentcard";
+import { useGetusersQuery, useGetpostsQuery } from "../../../../../store/slices/apislice";
+import CommentInput from './atoms/CommentInput'
 
-export { proimg, proimg1, proimg2, proimg3, Commentcard, MoreBtn, MainContent, PostActions, ProInfoCard, Proimage, Proname, thankyou, Postcard, UtilityIcons24 }
+export { proimg, proimg1, proimg2, proimg3, Commentcard, CommentInput, useGetpostsQuery, useGetusersQuery, MoreBtn, MainContent, PostActions, ProInfoCard, Proimage, Proname, thankyou, Postcard, UtilityIcons24 }

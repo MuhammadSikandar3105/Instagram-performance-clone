@@ -11,5 +11,7 @@ import loaderimgmeta from '../../assets/images/loadermeta.webp'
 import Footer from "../organisms/Footer/Footer";
 const Saved = React.lazy(() => import('./Profileroutes/Saved'))
 const Taged = React.lazy(() => import('./Profileroutes/Taged'))
+import { usefilter } from "../../lib/hooks/usefilter";
+import { useGetpostsQuery, useGetusersQuery } from "../../store/slices/apislice";
 
-export { MainContent, Saved, Taged, Footer, loaderimginsta, loaderimgmeta, FriendsSugg, Posts, Utilitity96, picture, UtilityIcons24, RoutesIcons }
+export { useGetpostsQuery, useGetusersQuery, MainContent, usefilter, Saved, Taged, Footer, loaderimginsta, loaderimgmeta, FriendsSugg, Posts, Utilitity96, picture, UtilityIcons24, RoutesIcons }

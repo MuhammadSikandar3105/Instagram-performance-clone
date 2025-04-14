@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Commentcard,
+  CommentInput,
   MainContent,
   MoreBtn,
   PostActions,
@@ -26,7 +27,7 @@ const Postview = ({ image, comment = true }) => {
         <div className="post flex border justify-center max-w-[673px] min-h-[420px] overflow-hidden">
           <div className="bg-black w-full flex items-center justify-center">
             <div className="img w-full h-full flex items-center">
-              <img src={proimg1} alt="" className="w-full" />
+              <img src={proimg} alt="" className="w-full" />
             </div>
           </div>
           <div className="w-full h-auto flex flex-col justify-between">
@@ -83,12 +84,10 @@ const Postview = ({ image, comment = true }) => {
                 <p className="text-xs border-color">March 11</p>
               </div>
               <div className="flex py-3 px-4 w-full h-fit">
-                <Proimage image={proimg} modal={false} />
-                <input
-                  type="text"
-                  placeholder="Add a comment..."
-                  className="py-1 focus:outline-none"
-                />
+                <div className="w-fit">
+                  <Proimage image={proimg} modal={false} />
+                </div>
+                <CommentInput />
               </div>
             </div>
           </div>
