@@ -111,10 +111,12 @@ const Profile = () => {
 const PostCard = () => {
   const { data, isError, isLoading, error } = useGetpostsQuery();
   const [posts, setPosts] = usefilter(data);
+
   useEffect(() => {
     let filters = [(item) => item.userid === "1"];
     !isLoading && setPosts(filters);
   }, [data]);
+
   return (
     <div className="posts-card w-full flex flex-col">
       <div className="cards flex items-center mb-16 flex-wrap justify-center">

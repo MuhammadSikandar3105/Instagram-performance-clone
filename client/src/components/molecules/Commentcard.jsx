@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import ProInfoCard from "./ProInfoCard";
 import { UtilityIcons24 } from "./PostMoreModal";
 
 const Commentcard = ({ image, comment, creply = false, uname }) => {
+  const [liked, setLiked] = useState(false);
   return (
     <div className="detail w-full h-fit">
       <ProInfoCard userName={uname} captions={comment} image={image}>
-        <div className="btn-color cursor-pointer">
-          <UtilityIcons24 name="like" size="18" />
+        <div
+          onClick={() => setLiked((prev) => !prev)}
+          className="btn-color cursor-pointer"
+        >
+          {liked ? (
+            <div className="text-red-500 transition">
+              <UtilityIcons24 name="liked" size="18" viewBox="0 0 48 48" />
+            </div>
+          ) : (
+            <UtilityIcons24 name="like" size="18" />
+          )}
         </div>
       </ProInfoCard>
       <div className="likes flex gap-3 btn-color text-xs ml-12 py-2 font-medium">

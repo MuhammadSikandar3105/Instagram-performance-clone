@@ -11,7 +11,7 @@ const ProInfoCard = ({
   size,
   modal,
 }) => {
-  const caption = captions?.split("#");
+  const caption = captions?.split(" #");
   return (
     <div className="flex w-full items-center justify-between">
       <div
@@ -35,13 +35,13 @@ const ProInfoCard = ({
                 {caption.map((tags, i) => {
                   if (i !== 0) {
                     return (
-                      <span className="text-[#386d98] cursor-pointer">
-                        {"#"}
+                      <span key={i} className="text-[#386d98] cursor-pointer">
+                        {" #"}
                         {tags}
                       </span>
                     );
                   }
-                  return <br />;
+                  return <br key={i} />;
                 })}
               </>
             ) : (
