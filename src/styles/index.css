@@ -42,15 +42,15 @@
     --blue-color: #0095F6;
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 0.5rem;
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background-color: var(--modal-bg);
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 5px;
 }
