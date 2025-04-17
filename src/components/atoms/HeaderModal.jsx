@@ -1,9 +1,13 @@
 import React from "react";
-import { MoreModalIcons } from "../../index";
+import { MoreModalIcons } from "./index";
 
-const HeaderModal = ({ name, handleClick, icon = true }) => {
+const HeaderModal = ({ name, handleClick, icon = true, border = true }) => {
   return (
-    <div className="border-bottom relative w-full text-center py-2 border-b-[1px]">
+    <div
+      className={`${
+        border && "border-bottom border-b"
+      } relative w-full text-center py-2`}
+    >
       <p className="font-semibold">{name}</p>
       {icon && (
         <div

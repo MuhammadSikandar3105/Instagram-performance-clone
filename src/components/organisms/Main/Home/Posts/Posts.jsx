@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Postcard, useGetpostsQuery, UtilityIcons24 } from "./index";
 
 const Posts = () => {

@@ -7,7 +7,7 @@ const MoreOpModal = React.lazy(() => import('./nestedModal/MoreOpModal'));
 const ShareModal = React.lazy(() => import('./nestedModal/ShareModal'));
 const ReportModal = React.lazy(() => import('./nestedModal/ReportModal'));
 const AcountModal = React.lazy(() => import('./nestedModal/AcountModal'));
-const HeaderModal = React.lazy(() => import('./nestedModal/atoms/HeaderModal'));
+const HeaderModal = React.lazy(() => import('../../atoms/HeaderModal'));
 import proimg from '../../../assets/images/IMG_4307.jpg'
 
 export { MoreOpPosition, proimg, HeaderModal, AcountModal, MoreOpModal, ShareModal, ReportModal, UtilityIcons24, RoutesIcons, MoreModalIcons }

@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { UtilityIcons24 } from "../pages";
+import Modal from "./Modal/Modal";
+import ShareModal from "./postShareModal/ShareModal";
 
 const PostActions = () => {
+  const [isSharemodal, setisSharemodal] = useState(false);
   const [liked, setLiked] = useState(false);
+
+  const handleClick = () => {
+    setisSharemodal(true);
+  };
+
   return (
     <div className="w-full my-1 flex justify-between items-center">
       <div className="like flex">
@@ -21,13 +29,21 @@ const PostActions = () => {
         <div className="p-2 cursor-pointer hover:text-[#737373]">
           <UtilityIcons24 name="comment" />
         </div>
-        <div className="p-2 cursor-pointer hover:text-[#737373]">
+        <div
+          onClick={handleClick}
+          className="p-2 cursor-pointer hover:text-[#737373]"
+        >
           <UtilityIcons24 name="share" />
         </div>
       </div>
       <div className="p-2 cursor-pointer hover:text-[#737373]">
         <UtilityIcons24 name="SAVED" />
       </div>
+      <Suspense>
+        <Modal>
+          {isSharemodal && <ShareModal setShare={setisSharemodal} />}
+        </Modal>
+      </Suspense>
     </div>
   );
 };
