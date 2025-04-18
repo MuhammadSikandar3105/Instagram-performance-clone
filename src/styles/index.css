@@ -10,6 +10,7 @@
 :root {
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
+    --graydark-color: #EFEFEF;
     --border-color: rgb(219, 219, 219);
     --modal-bg: rgb(255, 255, 255);
     --modal-shadow: rgb(0, 0, 0, 0.15);
@@ -17,7 +18,7 @@
     --gray-color: rgb(37, 37, 37);
     --btn-color: rgb(119, 119, 119, 1);
     --bgborder-color: rgb(85, 85, 85, 0.3);
-    --light-gray: rgb(115, 115, 115);
+    --light-gray: #737373;
     --hover-color: rgba(219, 219, 219, 0.341);
     --links-color: rgb(0, 55, 107);
     --dark-color: rgb(40, 39, 39);
@@ -29,6 +30,7 @@
     --primary-color: black;
     --secondary-color: white;
     --dark-color: gray;
+    --graydark-color: rgb(0, 0, 0);
     --links-color: #E0f1ff;
     --border-color: rgba(54, 54, 54, 0.796);
     --modal-bg: rgb(38, 38, 38, 1);
@@ -62,6 +64,14 @@
 
 .bg-primary {
     background-color: var(--primary-color);
+}
+
+.bg-darkgray {
+    background-color: var(--graydark-color);
+}
+
+.hovergray:hover {
+    background-color: var(--border-color);
 }
 
 .text-secondary {
