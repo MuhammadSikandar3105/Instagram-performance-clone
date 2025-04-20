@@ -21,8 +21,7 @@ const useWidth = (navbarRef) => {
         }
 
         return () => observer.disconnect();
-    }, []);
-
+    }, [navbarRef?.current?.offsetWidth]);
     return { width }
 }
 

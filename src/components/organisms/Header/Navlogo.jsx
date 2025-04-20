@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Navlogo = ({ classes }) => {
   const { largescreen, laptop, ipad } = useSelector((state) => state.screen);
+  const { active } = useSelector((state) => state.active);
   return (
     <NavLink
       className={`${
@@ -16,7 +17,7 @@ const Navlogo = ({ classes }) => {
     >
       {ipad ? (
         <Logo />
-      ) : largescreen && !laptop ? (
+      ) : largescreen && !laptop && active !== "messages" ? (
         <Logo />
       ) : (
         <RoutesIcons name="Logo" />

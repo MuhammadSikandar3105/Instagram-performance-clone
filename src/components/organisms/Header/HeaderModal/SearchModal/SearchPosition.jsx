@@ -10,8 +10,11 @@ const SearchPosition = React.memo(({ children, navbarWidth }) => {
   // dispatch only when screensize is greater than 1280px
   useEffect(() => {
     if (largescreen) {
+      console.log("called");
       dispatch(islaptop());
-      return () => dispatch(islarg());
+      return () => {
+        dispatch(islarg());
+      };
     }
   }, [activemodal]);
 

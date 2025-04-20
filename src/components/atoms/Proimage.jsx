@@ -1,6 +1,5 @@
 import React, { Suspense, useRef } from "react";
-import { Modal, ProDetailModal } from "./index";
-import { useProModal } from "../../lib/hooks/useProModal";
+import { Modal, ProDetailModal, useProModal } from "./index";
 
 const Proimage = ({ image, size, modal = true }) => {
   const imageRef = useRef(null);

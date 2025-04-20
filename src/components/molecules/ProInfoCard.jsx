@@ -10,6 +10,7 @@ const ProInfoCard = ({
   children,
   size,
   modal,
+  classses,
 }) => {
   const caption = captions?.split(" #");
   return (
@@ -21,7 +22,7 @@ const ProInfoCard = ({
       >
         <Proimage image={image} size={size} modal={modal} />
         <div className="flex flex-col">
-          <Proname name={userName} modal={modal} />
+          <Proname name={userName} modal={modal} classses={classses} />
           <div
             className={`text-sm ${
               detail || captions ? "text-primary" : "btn-color"

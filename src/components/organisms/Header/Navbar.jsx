@@ -22,8 +22,8 @@ import {
   CreateModal,
   MobileNav,
   iscreatemodal,
+  usemodal,
 } from "./index.js";
-import usemodal from "../../../lib/hooks/usemodal.js";
 
 const Navbar = () => {
   const { openmodal, goback } = usemodal(); // custom hook to update modalSlice
@@ -33,7 +33,6 @@ const Navbar = () => {
   const navbarRef = useRef(null);
   const dispatch = useDispatch();
   const { width } = useWidth(navbarRef); // custom hook to check ele width
-
   const modalhandleClick = (modalName) => {
     dispatch(iscreatemodal({ modalName }));
   };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ProInfoCard from "./ProInfoCard";
-import { UtilityIcons24 } from "./PostMoreModal";
+import { ProInfoCard, UtilityIcons24 } from "./index";
 
 const Commentcard = ({ image, comment, creply = false, uname }) => {
   const [liked, setLiked] = useState(false);

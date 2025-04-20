@@ -45,7 +45,9 @@ const ApearenceModal = ({ goback }) => {
             onClick={handleclick}
           >
             <p>Dark mode</p>
-            <SwitchButton condition={darktheme} />
+            <Suspense>
+              <SwitchButton condition={darktheme} />
+            </Suspense>
           </div>
         </div>
       </Suspense>

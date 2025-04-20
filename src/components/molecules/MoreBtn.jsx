@@ -1,6 +1,5 @@
 import { Suspense, useState } from "react";
-import { UtilityIcons24 } from "../pages";
-import { Modal, MoreOption } from "./index";
+import { Modal, MoreOption, UtilityIcons24 } from "./index";
 
 const MoreBtn = () => {
   const [isMoreOpen, setIsMoreOpen] = useState(false);

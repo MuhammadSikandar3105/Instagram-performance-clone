@@ -1,10 +1,10 @@
 import React from "react";
-import { MainContent } from "./index";
+import { MainContent, Messages } from "./index";
 
 const Message = () => {
   return (
     <MainContent>
-      <div className="text-center">Message</div>
+      <Messages />
     </MainContent>
   );
 };

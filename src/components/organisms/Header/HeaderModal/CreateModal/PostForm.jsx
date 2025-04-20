@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { CreateModalIcons, SwitchButton } from "./index";
 
 const PostForm = ({ pic, isform, data, setData }) => {
@@ -137,7 +137,9 @@ const Setting = ({ name, data, heading, disc, setData }) => {
             }))
           }
         >
-          <SwitchButton condition={data[name]} />
+          <Suspense>
+            <SwitchButton condition={data[name]} />
+          </Suspense>
         </div>
       </div>
       <p className="text-sm">{disc}</p>

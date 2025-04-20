@@ -13,5 +13,6 @@ const Saved = React.lazy(() => import('./Profileroutes/Saved'))
 const Taged = React.lazy(() => import('./Profileroutes/Taged'))
 import { usefilter } from "../../lib/hooks/usefilter";
 import { useGetpostsQuery, useGetusersQuery } from "../../store/slices/apislice";
+const Messages = React.lazy(() => import("../organisms/Main/Message/Messages"));
 
-export { useGetpostsQuery, useGetusersQuery, MainContent, usefilter, Saved, Taged, Footer, loaderimginsta, loaderimgmeta, FriendsSugg, Posts, Utilitity96, picture, UtilityIcons24, RoutesIcons }
+export { useGetpostsQuery, Messages, useGetusersQuery, MainContent, usefilter, Saved, Taged, Footer, loaderimginsta, loaderimgmeta, FriendsSugg, Posts, Utilitity96, picture, UtilityIcons24, RoutesIcons }

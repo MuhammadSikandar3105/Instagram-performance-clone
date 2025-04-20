@@ -13,12 +13,11 @@ const List = React.memo(({ to, Icon, spanname, handleModal }) => {
   const { pathname } = useLocation();
   const { closemodal } = usemodal();
   const handleClick = (e) => {
-    // if modal user want to open modal then not change route
     if (handleModal) {
       e.preventDefault();
       dispatch(activeRoute(spanname));
+      handleModal(spanname, buttonRef);
     }
-    handleModal && handleModal(spanname, buttonRef);
   };
   // when pathname change then update acitveroute
   useEffect(() => {

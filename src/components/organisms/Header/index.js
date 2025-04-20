@@ -9,7 +9,7 @@ const ApearenceModal = React.lazy(() => import("./HeaderModal/MoreModal/Apearenc
 const SeachModal = React.lazy(() => import("./HeaderModal/SearchModal/SearchModal.jsx"))
 const NotifiModal = React.lazy(() => import("./HeaderModal/NotifiModal/Notifi.jsx"))
 const CreateModal = React.lazy(() => import("./HeaderModal/CreateModal/CreateModal.jsx"))
-const Modal = React.lazy(() => import("../../../components/molecules/Modal/Modal.jsx"));
+import { Modal } from '../../molecules/index.js'
 // custom hooks
 import useWidth from "../../../lib/hooks/useWidth.js";
 import usemodal from "../../../lib/hooks/usemodal";

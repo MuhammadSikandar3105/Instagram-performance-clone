@@ -11,7 +11,7 @@ const SuggFriendsArr = [
 ];
 const FriendsSugg = () => {
   return (
-    <div className="max-w-[383px] w-full h-auto pl-16 mt-9 hidden lg:flex flex-col justify-center items-center">
+    <div className="max-w-[383px] w-full h-auto pl-12 pr-4 mt-9 hidden lg:flex flex-col justify-center items-center">
       <div className=" w-full">
         <ProInfoCard
           userName="mr.malik2189"

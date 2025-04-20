@@ -57,6 +57,10 @@
     border-radius: 5px;
 }
 
+.ScrollCon::-webkit-scrollbar {
+    display: none;
+}
+
 .dark {
     background-color: var(--primary-color);
     color: var(--secondary-color)
@@ -68,10 +72,6 @@
 
 .bg-darkgray {
     background-color: var(--graydark-color);
-}
-
-.hovergray:hover {
-    background-color: var(--border-color);
 }
 
 .text-secondary {

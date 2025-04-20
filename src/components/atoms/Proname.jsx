@@ -1,8 +1,7 @@
 import React, { Suspense, useRef } from "react";
-import { Modal, ProDetailModal } from ".//index";
-import { useProModal } from "../../lib/hooks/useProModal";
+import { Modal, ProDetailModal, useProModal } from "./index";
 
-const Proname = ({ name, modal = true }) => {
+const Proname = ({ name, modal = true, classses }) => {
   const nameRef = useRef(null);
   const [ismodal, position, handleMouseEnter, handleMouseLeave] =
     useProModal(nameRef);
@@ -15,7 +14,7 @@ const Proname = ({ name, modal = true }) => {
           onMouseLeave: handleMouseLeave,
           ref: nameRef,
         })}
-        className="text-sm w-fit text-secondary cursor-pointer font-semibold"
+        className={`${classses} text-sm w-fit text-secondary cursor-pointer font-semibold`}
       >
         {name}
       </div>

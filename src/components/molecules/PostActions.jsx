@@ -1,7 +1,5 @@
 import React, { Suspense, useState } from "react";
-import { UtilityIcons24 } from "../pages";
-import Modal from "./Modal/Modal";
-import ShareModal from "./postShareModal/ShareModal";
+import { Modal, ShareModal, UtilityIcons24 } from "./index";
 
 const PostActions = () => {
   const [isSharemodal, setisSharemodal] = useState(false);
@@ -41,7 +39,11 @@ const PostActions = () => {
       </div>
       <Suspense>
         <Modal>
-          {isSharemodal && <ShareModal setShare={setisSharemodal} />}
+          {isSharemodal && (
+            <Suspense fallback={"loading..."}>
+              <ShareModal setShare={setisSharemodal} />
+            </Suspense>
+          )}
         </Modal>
       </Suspense>
     </div>

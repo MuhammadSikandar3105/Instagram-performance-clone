@@ -5,10 +5,10 @@ import { Gragphotos } from "../../../../../assets/svg/NavbarIcons/MoreModalIcons
 import { MoreModalIcons } from "../MoreModal";
 import { RoutesIcons } from "../../../../molecules";
 import { newdata } from "../../../../../store/slices/createFormslice";
-import { Modal } from "../../index";
+import { Modal } from "../../../../molecules/index";
 const DiscardModal = React.lazy(() => import('./DiscardModal'))
 import CreateModalIcons from "../../../../../assets/svg/NavbarIcons/CreateModalIcons";
-import SwitchButton from "../../../../molecules/SwitchButton";
+const SwitchButton = React.lazy(() => import("../../../../molecules/SwitchButton"))
 import { useAddpostMutation } from "../../../../../store/slices/apislice";
 import { useGetpostsQuery } from "../../../../../store/slices/apislice";
 import loader from '../../../../../assets/images/instagramloader.gif'
