@@ -114,6 +114,14 @@
     border-top-color: var(--border-color);
 }
 
+.border-left {
+    border-left-color: var(--border-color);
+}
+
+.border-right {
+    border-right-color: var(--border-color);
+}
+
 .border-bottom {
     border-bottom-color: var(--border-color);
 }

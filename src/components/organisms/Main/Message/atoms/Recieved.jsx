@@ -1,13 +1,10 @@
 import React from "react";
 
-const Recieved = () => {
+const Recieved = ({ msg }) => {
   return (
     <div className="max-w-[75%]">
-      <div className="w-fit mb-1 p-[8px] rounded-[15px] relative received bg-white text-[#121212] self-start ml-[16px] text-[14px] font-normal tracking-[0.3px]">
-        Lorem ipsum dolor sit amet consectetur.
-      </div>
-      <div className="w-fit mb-1 p-[8px] rounded-[15px] relative received bg-white text-[#121212] self-start ml-[16px] text-[14px] font-normal tracking-[0.3px]">
-        Lorem ipsum dolor sit amet consectetur.
+      <div className="w-fit mb-1 py-[7px] px-3 rounded-[15px] relative received bg-border text-primary self-start text-[15px] font-normal tracking-[0.3px]">
+        {msg}
       </div>
     </div>
   );

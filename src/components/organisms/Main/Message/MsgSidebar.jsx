@@ -1,13 +1,20 @@
 import React from "react";
-import MessageHeader from "./atoms/MessageHeader";
-import { ProInfoCard } from "../../../molecules";
-import { proimg } from "./index";
+import { ProInfoCard, UtilityIcons24 } from "../../../molecules";
+import { MoreModalIcons, proimg } from "./index";
 
 const MsgSidebar = () => {
   return (
-    <div className="max-w-[25%] flex flex-col fixed w-full h-[100vh] border-r border left-[73px] bg-primary overflow-hidden">
-      <MessageHeader />
-      <MessageHeader />
+    <div className="max-w-[27.1%] flex-col w-full h-[100vh] border-r border-right bg-primary overflow-hidden">
+      <div className="flex items-center justify-between pt-9 pb-3 px-6 w-full h-[10%]">
+        <div className="flex items-center gap-2">
+          <p className="text-xl font-bold">mr.malik2186</p>
+          <div className="rotate-[-180deg] cursor-pointer">
+            <MoreModalIcons name="back" size="12" />
+          </div>
+        </div>
+        <UtilityIcons24 name="newmsg" />
+      </div>
+
       <div className="h-[90%] w-full overflow-auto">
         {Array.from({ length: 12 }).map(() => {
           return (
